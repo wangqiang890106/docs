@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "1Documentation Starter Kit",
+  "name": "Developer Hub",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
   },
-  "favicon": "/favicon.png",
+  "favicon": "/logo/cobo.png",
   "colors": {
     "primary": "#0069ED",
     "light": "#4D9CFF",
@@ -13,53 +13,345 @@
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Explore Cobo",
+      "url": "https://www.cobo.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "url": "https://home.custody.cobo.com/#/login"
   },
   "anchors": [
     {
-      "name": "API Reference",
+      "name": "SDKs & Kits",
+      "icon": "puzzle",
+      "url": "sdk"
+    },
+    {
+      "name": "WaaS API",
       "icon": "rectangle-terminal",
       "url": "api-reference"
     },
     {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://mintlify.com"
+      "name": "Blog",
+      "icon": "blogger",
+      "url": "https://news.cobo.com/home/en/"
     },
     {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/CoboCustody/"
+    },
+    {
+      "name": "twitter",
+      "icon": "twitter",
+      "url": "https://twitter.com/Cobo_Global"
     }
   ],
   "navigation": [
     {
-      "group": "Home",
-      "pages": ["introduction", "features"]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
-    },
-    {
-      "group": "Endpoint Examples",
+      "group": "Overview",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "introduction"
+      ]
+    },
+    {
+      "group": "Products & Services",
+      "pages": [
+        "cobo_full_custody",
+        "cobo_co_managed_custody",
+        "cobo_lite",
+        "cobo_superloop",
+        "cobo_waas",
+        "cobo_argus"
+      ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "/changelog"
+      ]
+    },
+    {
+      "group": "Overview",
+      "pages": [
+        "api-reference/start-waas",
+        "api-reference/authentication",
+        "api-reference/test"
+      ]
+    },
+    {
+      "group": "Wallet as a Service (Waas)",
+      "pages": [
+        {
+          "group": "Standard Wallet API",
+          "pages": [
+            {
+              "group": "Account",
+              "pages": [
+                "api-reference/standard-wallet/org_info",
+                "api-reference/standard-wallet/coin_info",
+                "api-reference/standard-wallet/get_supported_coins",
+                "api-reference/standard-wallet/new_address",
+                "api-reference/standard-wallet/new_addresses",
+                "api-reference/standard-wallet/address_info",
+                "api-reference/standard-wallet/addresses_info",
+                "api-reference/standard-wallet/is_valid_address",
+                "api-reference/standard-wallet/address_history"
+              ]
+            },
+            {
+              "group": "Loop Alliance",
+              "pages": [
+                "api-reference/standard-wallet/internal_address_info",
+                "api-reference/standard-wallet/internal_address_info_batch",
+                "api-reference/standard-wallet/loop-explorer"
+              ]
+            },
+            {
+              "group": "Transactions",
+              "pages": [
+                "api-reference/standard-wallet/transaction",
+                "api-reference/standard-wallet/transactions_by_id",
+                "api-reference/standard-wallet/transactions_by_request_ids",
+                "api-reference/standard-wallet/transaction_by_txid",
+                "api-reference/standard-wallet/transactions_by_time",
+                "api-reference/standard-wallet/pending_transaction",
+                "api-reference/standard-wallet/pending_transactions",
+                "api-reference/standard-wallet/transaction_history"
+              ]
+            },
+            {
+              "group": "Withdrawal",
+              "pages": [
+                "api-reference/standard-wallet/new_withdraw_request",
+                "api-reference/standard-wallet/withdraw_info_by_request_id"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Web3 Wallet API",
+          "pages": [
+            {
+              "group": "Account",
+              "pages": [
+                "api-reference/web3-wallet/web3_supported_chains",
+                "api-reference/web3-wallet/web3_supported_coins",
+                "api-reference/web3-wallet/web3_supported_nft_collections",
+                "api-reference/web3-wallet/web3_supported_contracts",
+                "api-reference/web3-wallet/web3_supported_contract_methods",
+                "api-reference/web3-wallet/web3_add_addresses",
+                "api-reference/web3-wallet/web3_list_wallet_address",
+                "api-reference/web3-wallet/web3_list_wallet_assets",
+                "api-reference/web3-wallet/web3_list_wallet_nfts",
+                "api-reference/web3-wallet/web3_wallet_nft_detail"
+              ]
+            },
+            {
+              "group": "Transactions",
+              "pages": [
+                "api-reference/web3-wallet/web3_list_wallet_transactions"
+              ]
+            },
+            {
+              "group": "Withdrawal",
+              "pages": [
+                "api-reference/web3-wallet/web3_withdraw",
+                "api-reference/web3-wallet/web3_get_withdraw_transaction",
+                "api-reference/web3-wallet/web3_contract",
+                "api-reference/web3-wallet/web3_get_contract_transaction"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "MPC Wallet API",
+          "pages": [
+            {
+              "group": "Account",
+              "pages": [
+                "api-reference/mpc-wallet/mpc_get_supported_chains",
+                "api-reference/mpc-wallet/mpc_get_supported_coins",
+                "api-reference/mpc-wallet/mpc_get_wallet_supported_coins",
+                "api-reference/mpc-wallet/mpc_is_valid_address",
+                "api-reference/mpc-wallet/mpc_generate_addresses",
+                "api-reference/mpc-wallet/mpc_list_addresses",
+                "api-reference/mpc-wallet/mpc_get_balance",
+                "api-reference/mpc-wallet/mpc_list_balances",
+                "api-reference/mpc-wallet/mpc_list_spendable",
+                "api-reference/mpc-wallet/mpc_estimate_fee"
+              ]
+            },
+            {
+              "group": "Transaction",
+              "pages": [
+                "api-reference/mpc-wallet/mpc_list_transactions",
+                "api-reference/mpc-wallet/mpc_transactions_by_request_ids",
+                "api-reference/mpc-wallet/mpc_transactions_by_cobo_ids",
+                "api-reference/mpc-wallet/mpc_transactions_by_tx_hash"
+              ]
+            },
+            {
+              "group": "Withdrawal",
+              "pages": [
+                "api-reference/mpc-wallet/mpc_create_transaction",
+                "api-reference/mpc-wallet/mpc_speedup_transaction",
+                "api-reference/mpc-wallet/mpc_drop_transaction",
+                "api-reference/mpc-wallet/mpc_retry_double_check"
+              ]
+            },
+            {
+              "group": "Tss Node",
+              "pages": [
+                "api-reference/mpc-wallet/mpc_list_tss_node_requests"
+              ]
+            },
+            {
+              "group": "Bind Auth",
+              "pages": [
+                "api-reference/mpc-wallet/auth_create_binding",
+                "api-reference/mpc-wallet/auth_query_binding",
+                "api-reference/mpc-wallet/auth_query_user_auth",
+                "api-reference/mpc-wallet/auth_bind_addresses",
+                "api-reference/mpc-wallet/auth_change_binding",
+                "api-reference/mpc-wallet/auth_unbind_binding",
+                "api-reference/mpc-wallet/auth_query_statement"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "MPC Web3 Wallet API",
+          "pages": [
+            {
+              "group": "Account",
+              "pages": [
+                "api-reference/mpc-web3-wallet/mpc_get_supported_chains",
+                "api-reference/mpc-web3-wallet/mpc_get_supported_coins",
+                "api-reference/mpc-web3-wallet/mpc_get_supported_nft_collections",
+                "api-reference/mpc-web3-wallet/mpc_is_valid_address",
+                "api-reference/mpc-web3-wallet/mpc_generate_addresses",
+                "api-reference/mpc-web3-wallet/mpc_list_addresses",
+                "api-reference/mpc-web3-wallet/mpc_get_balance",
+                "api-reference/mpc-web3-wallet/mpc_list_balances",
+                "api-reference/mpc-web3-wallet/mpc_list_spendable",
+                "api-reference/mpc-web3-wallet/mpc_estimate_fee"
+              ]
+            },
+            {
+              "group": "Transaction",
+              "pages": [
+                "api-reference/mpc-web3-wallet/mpc_list_transactions",
+                "api-reference/mpc-web3-wallet/mpc_transactions_by_request_ids",
+                "api-reference/mpc-web3-wallet/mpc_transactions_by_cobo_ids",
+                "api-reference/mpc-web3-wallet/mpc_transactions_by_tx_hash"
+              ]
+            },
+            {
+              "group": "Withdrawal",
+              "pages": [
+                "api-reference/mpc-web3-wallet/mpc_create_transaction",
+                "api-reference/mpc-web3-wallet/mpc_speedup_transaction",
+                "api-reference/mpc-web3-wallet/mpc_drop_transaction",
+                "api-reference/mpc-web3-wallet/mpc_sign_message"
+              ]
+            },
+            {
+              "group": "Tss Node",
+              "pages": [
+                "api-reference/mpc-web3-wallet/mpc_list_tss_node_requests"
+              ]
+            },
+            {
+              "group": "Bind Auth",
+              "pages": [
+                "api-reference/mpc-web3-wallet/auth_create_binding",
+                "api-reference/mpc-web3-wallet/auth_query_binding",
+                "api-reference/mpc-web3-wallet/auth_query_user_auth",
+                "api-reference/mpc-web3-wallet/auth_bind_addresses",
+                "api-reference/mpc-web3-wallet/auth_change_binding",
+                "api-reference/mpc-web3-wallet/auth_unbind_binding",
+                "api-reference/mpc-web3-wallet/auth_query_statement"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Staking",
+          "pages": [
+            "api-reference/staking/staking_product",
+            "api-reference/staking/staking_products",
+            "api-reference/staking/staking_stake",
+            "api-reference/staking/staking_unstake",
+            "api-reference/staking/stakings",
+            "api-reference/staking/unstakings",
+            "api-reference/staking/staking_history"
+          ]
+        },
+        {
+          "group": "Trading",
+          "pages": [
+            "api-reference/trading/trading_withdraw",
+            "api-reference/trading/trading_withdraw_info",
+            "api-reference/trading/trading_deposit",
+            "api-reference/trading/trading_deposit_info",
+            "api-reference/trading/trading_transfer",
+            "api-reference/trading/trading_transfer_info"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Appendix",
+      "pages": [
+        "api-reference/error-codes",
+        "api-reference/transaction-notification",
+        "api-reference/withdrawal-confirmation",
+        "api-reference/callback-signature",
+        "api-reference/faq"
+      ]
+    },
+    {
+      "group": "Overview",
+      "pages": [
+        "sdk/introduction"
+      ]
+    },
+    {
+      "group": "SDKs",
+      "pages": [
+        "sdk/java",
+        "sdk/php",
+        "sdk/python",
+        "sdk/javascript",
+        "sdk/go"
+      ]
+    },
+    {
+      "group": "Kits",
+      "pages": [
+        "sdk/mpc_recovery"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/Cobo_Global",
+    "github": "https://github.com/CoboCustody/",
+    "linkedin": "https://www.linkedin.com/company/cobo-global/"
+  },
+  "feedback": {
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "api": {
+    "baseUrl": "https://api.sandbox.cobo.com",
+    "auth": {
+      "method": "basic",
+      "name": "Biz-Api-Key:BIZ-API-SIGNATURE:BIZ-API-NONCE"
+    },
+    "playground": {
+      "mode": "show"
+    }
   }
 }

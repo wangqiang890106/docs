@@ -1,0 +1,53 @@
+---
+title: 
+api: GET /v1/custody/web3_supported_contracts/ 
+description: Get Supported Contracts 
+---
+#### Request 
+
+<ParamField body="chain_code" type="String" required>Chain code</ParamField> 
+
+#### Response 
+
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/web3_supported_contracts/",
+    {
+        "chain_code": "ETH",
+    },
+    api_key, api_secret, host
+)
+```
+```javascript Javascript
+coboFetch('GET', '/v1/custody/web3_supported_contracts/', {
+      "chain_code": "ETH",
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/web3_supported_contracts/", map[string]string{
+      "chain_code": "ETH",
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "contract_addresses": [
+    "0xdcd85914b8ae28c1e62f1c488e1d968d5aaffe2b",
+    "0xdd974d5c2e2928dea5f71b9825b8b646686bd200",
+    "0xe8f88d16f24255fcfab25959705d724406d67d9d",
+    "0xc042254c4b520854c40b86af90a30757103940e6"
+  ]
+}
+```
+</ResponseExample>

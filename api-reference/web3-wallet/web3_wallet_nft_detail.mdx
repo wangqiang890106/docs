@@ -1,0 +1,64 @@
+---
+title: 
+api: GET /v1/custody/web3_wallet_nft_detail/ 
+description: Get Wallet NFT Detail 
+---
+#### Request 
+
+<ParamField body="nft_code" type="String" required>NFT Collection Code</ParamField> 
+<ParamField body="token_id" type="String" required>NFT Token Id</ParamField> 
+
+#### Response 
+
+<ResponseField name="nft_code" type="String" >NFT Collection Code</ResponseField> 
+<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
+<ResponseField name="description" type="String" >Full name of NFT (not unique, changeable, for reference only )</ResponseField> 
+<ResponseField name="standard" type="String" >NFT amount</ResponseField> 
+<ResponseField name="contract_address" type="String" >NFT Contract Address</ResponseField> 
+<ResponseField name="token_id" type="String" >NFT Token Id</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/web3_wallet_nft_detail/",
+    {
+        "nft_code": "NFT_ETH_SS",
+        "token_id": "10342"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript Javascript
+coboFetch('GET', '/v1/custody/web3_wallet_nft_detail/', {
+      "nft_code": "NFT_ETH_SS",
+      "token_id": "10342"
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/web3_wallet_nft_detail/", map[string]string{
+      "nft_code": "NFT_ETH_SS",
+      "token_id": "10342"
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "nft_code": "NFT_ETH_SS",
+  "chain_code": "ETH",
+  "display_code": "Smuggled Supplies",
+  "description": "Smuggled Supplies",
+  "contract_address": "0x76be3b62873462d2142405439777e971754e8e77",
+  "standard": "ERC1155",
+  "token_id": "10342"
+}
+```
+</ResponseExample>

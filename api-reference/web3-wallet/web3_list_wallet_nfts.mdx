@@ -1,0 +1,70 @@
+---
+title: 
+api: GET /v1/custody/web3_list_wallet_nfts/ 
+description: Obtain the list of NFTs through NFT Code query 
+---
+#### Request 
+
+<ParamField body="nft_code" type="String" required>NFT Collection Code</ParamField> 
+<ParamField body="address" type="String" >Address, if it is empty, it will return the assets in all addresses, if it is not empty, it will return the assets in this address</ParamField> 
+
+#### Response 
+
+<ResponseField name="nft_code" type="String" >NFT Collection Code</ResponseField> 
+<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
+<ResponseField name="description" type="String" >Full name of NFT (not unique, changeable, for reference only )</ResponseField> 
+<ResponseField name="amount" type="String" >NFT amount</ResponseField> 
+<ResponseField name="standard" type="String" >Token Standard</ResponseField> 
+<ResponseField name="contract_address" type="String" >NFT Contract Address</ResponseField> 
+<ResponseField name="token_id" type="String" >NFT Token Id</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/web3_list_wallet_nfts/",
+    {
+        "nft_code": "NFT_ETH_SS",
+        "address": "0x47795c2f1459aa1d27d00a755a729cc2c9b952df"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript Javascript
+coboFetch('GET', '/v1/custody/web3_list_wallet_nfts/', {
+      "nft_code": "NFT_ETH_SS",
+      "address": "0x47795c2f1459aa1d27d00a755a729cc2c9b952df"
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/web3_list_wallet_nfts/", map[string]string{
+      "nft_code": "NFT_ETH_SS",
+      "address": "0x47795c2f1459aa1d27d00a755a729cc2c9b952df"
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "nfts": [
+    {
+      "nft_code": "NFT_ETH_SS",
+      "chain_code": "ETH",
+      "display_code": "Smuggled Supplies",
+      "description": "Smuggled Supplies",
+      "amount": "1",
+      "standard": "ERC1155",
+      "contract_address": "0x76be3b62873462d2142405439777e971754e8e77",
+      "token_id": "10342"
+    }
+  ]
+}
+```
+</ResponseExample>

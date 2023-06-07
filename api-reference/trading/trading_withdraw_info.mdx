@@ -1,0 +1,46 @@
+---
+title: 
+api: GET /v1/custody/trading_withdraw_info/ 
+description: Get Trading Withdrawal Information 
+---
+#### Request 
+
+<ParamField body="request_id" type="String" required>Request ID (Universally unique ID for each request)</ParamField> 
+
+#### Response 
+
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/trading_withdraw_info/",
+    {
+        "request_id": "UNIQUE_ID_FOR_WITHDRAW"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript Javascript
+coboFetch('GET', '/v1/custody/trading_withdraw_info/',
+        {
+            "request_id": "UNIQUE_ID_FOR_WITHDRAW"
+        },
+        api_key, api_secret, host
+    ).then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/trading_withdraw_info/", map[string]string{
+    "request_id": "UNIQUE_ID_FOR_WITHDRAW"
+})
+```
+</RequestExample>
+
+<ResponseExample>
+
+</ResponseExample>

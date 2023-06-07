@@ -1,0 +1,94 @@
+---
+title: 
+api: GET /v1/custody/mpc/get_balance/ 
+description: Get Balance 
+---
+#### Request 
+
+<ParamField body="address" type="String" required>address</ParamField> 
+<ParamField body="chain_code" type="String" >chain code</ParamField> 
+<ParamField body="coin" type="String" >coin name</ParamField> 
+
+#### Response 
+
+<ResponseField name="address" type="String" >Address</ResponseField> 
+<ResponseField name="coin" type="String" >Coin name (Cobo Custody)</ResponseField> 
+<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
+<ResponseField name="description" type="String" >Full name (reference only, subject to change)</ResponseField> 
+<ResponseField name="balance" type="String" >Coin balance</ResponseField> 
+<ResponseField name="decimal" type="Int" >Decimal precision</ResponseField> 
+<ResponseField name="nft_code" type="String" >NFT code</ResponseField> 
+<ResponseField name="token_id" type="String" >NFT token Id</ResponseField> 
+<ResponseField name="contract_address" type="String" >NFT contract address</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/mpc/get_balance/",
+    {
+        "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+        "chain_code": "ETH",
+        "coin": "ETH"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript Javascript
+coboFetch('GET', '/v1/custody/mpc/get_balance/', {
+    "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+    "chain_code": "ETH",
+    "coin": "ETH"
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/mpc/get_balance/", map[string]string{
+    "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+    "chain_code": "ETH",
+    "coin": "ETH"
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "coin_data": [
+    {
+      "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+      "coin": "ETH",
+      "chain_code": "ETH",
+      "display_code": "ETH",
+      "description": "Ethereum",
+      "balance": "49999999999999999987",
+      "decimal": 18
+    },
+    {
+      "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+      "coin": "ETH",
+      "chain_code": "ETH",
+      "display_code": "ETH",
+      "description": "Ethereum",
+      "balance": "47290549999999999988",
+      "decimal": 18
+    }
+  ],
+  "nft_data": [
+    {
+      "nft_code": "NFT_ETH_BLUE_CHURCH",
+      "token_id": "200",
+      "address": "0xcc656c94b8ec881ddd9611e8ad4a4eca9f859e7b",
+      "chain_code": "ETH",
+      "contract_address": "0x357fd2942e8ee435d7d21859ecae99bd597d8779",
+      "balance": "1"
+    }
+  ]
+}
+```
+</ResponseExample>
