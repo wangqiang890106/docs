@@ -1,4 +1,57 @@
 ---
-title: "Cobo Co-Managed Custody"
+title: "Co-Managed Custody"
 icon: ""
 ---
+
+# A Developer-Friendly, Cutting-Edge Custody Solution
+
+Cobo MPC Co-Managed Custody is a cutting-edge custody solution that leverages secure Multi-Party Computation (MPC) technology to implement a Threshold Signature Scheme (TSS).
+
+This technology allows for the simultaneous creation of private key shares by multiple parties within a secure environment. By utilizing the MPC-TSS setup, Cobo ensures that the private key used to execute transactions never exists or resides in any devices individually, thus removing single points of failure.
+
+
+## Cobo MPC WaaS Core Features
+<img src="/images/co_managed_custody.png" />
+
+
+## Multi-Role Collaboration
+The establishment of multiple roles facilitates institutions to establish customisable workflows according to their needs, allowing them to work more efficiently, and support operation scaling. Creators will be able to create a segregation of duties by managing users and assigning permissions and roles.
+<img src="/images/co_managed_custody_multi_role.png" />
+
+
+
+## Benefits for Developers
+
+- **Enhanced Security**: Cobo MPC Co-Managed Custody achieves decentralization of private key storage and management through key sharding, significantly reducing the risk of single points of failure. This ensures robust security for developers and institutions.
+
+- **Efficient Transactions**: By utilizing MPC-TSS, each multi-party signing is considered as one on-chain transaction, leading to more efficient and cost-effective management of digital assets.
+
+- **Chain and Asset Agnostic**: MPC technology is designed to be chain- and asset-agnostic, providing flexibility and ease of onboarding for new digital assets.
+
+- **Robust Key Protection**: Cobo employs military-grade security measures to safeguard private key shares. Soft and hard recovery mechanisms guarantee that clients maintain full control over their funds, even in extreme scenarios.
+
+## Key Features for Developers
+
+### MPC-TSS Technology
+
+Cobo recommends a 3-party custodian solution and a 2/3 signature scheme. This approach generates three MPC key shares independently held by Cobo, the client, and an entrusted third party. Each transaction signing requires the participation of at least two parties, ensuring heightened security against key theft and internal fraud.
+
+### Advanced Risk Management
+
+Cobo offers comprehensive risk management strategies, including a superior risk control framework and real-time on-chain monitoring. Developers can implement customized risk control rules such as spending limits, whitelists, blacklists, and IP monitoring. This robust risk management system provides a high level of security and protection against operational risks.
+
+### Role-based Access Control and Custom Workflows
+
+Cobo MPC Co-Managed Custody provides role-based access control and customizable workflows tailored to the needs of developers and institutions. Developers can set up roles such as Admin, Spender, Approver, and Operator, effectively segregating user privileges. Governance policies can be applied through a customizable workflow engine and a transaction approval process. Cobo Auth mobile app serves as a 2FA, supporting multi-role and multi-level authentication for secure transactions.
+
+### Access to Web3 and NFT
+
+Cobo MPC Co-Managed Custody seamlessly integrates with Web3 wallets, offering unparalleled access to DApps, DeFi services, and NFTs. Developers can utilize the Cobo Connect extension to interact directly with dApps, NFT contracts, and participate in projects on the EVM chain. The Web3 wallet empowers developers with features such as DEX trading, swapping, native staking, NFT holding, and more.
+
+### Co-management
+
+Cobo MPC Co-Managed Custody enables co-management of funds with clients and business partners. External clients and partners can participate in transaction approval and signing through Cobo's mobile SDK and Cobo Auth, expanding the reach of custody technology within your business ecosystem.
+
+### Wallet-as-a-Service Integration
+
+Leveraging MPC technology, Cobo provides a crypto wallet infrastructure service called Cobo Wallet-as-a-Service (WaaS). With simple APIs and plug-and-play SDKs, developers gain access to over 1,800 tokens across more than 70 chains. Cobo WaaS API offers various functionalities to minimize implementation efforts, including address generation and management, token transfers, token sweeping, smart contract interaction, transaction notifications, transaction history retrieval, and more. Client libraries are available in Python, JavaScript, Golang, Java, and PHP, ensuring seamless integration into your preferred programming language and environment.
