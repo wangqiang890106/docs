@@ -1,0 +1,73 @@
+---
+title: 
+api: GET /v1/custody/withdraw_info_by_request_id/ 
+description: Get Withdrawal Information 
+---
+#### Request 
+
+<ParamField body="request_id" type="String" required>Withdrawal Request ID</ParamField> 
+
+#### Response 
+
+<RequestExample>
+```python
+request(
+    "GET",
+    "/v1/custody/withdraw_info_by_request_id/",
+    {
+        "request_id": "unique_123456"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript
+coboFetch('GET', '/v1/custody/withdraw_info_by_request_id/',
+        {
+            "request_id": "unique_123456"
+        },
+        api_key, api_secret, host
+    ).then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go
+Request("GET", "/v1/custody/withdraw_info_by_request_id/", map[string]string{
+    "request_id": "unique_123456",
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "success": true,
+  "result": {
+    "id": "",
+    "coin": "BTC_USDT",
+    "display_code": "USDT",
+    "description": "Tether",
+    "decimal": 8,
+    "address": "18bpqEgCJ17TwxDwT26YjQnSBFVgcLBimE",
+    "memo": "",
+    "source_address": "1F5i9mdCAsU2EfQtXYpwZgW2UFzS8A2EMn",
+    "source_address_detail": "1F5i9mdCAsU2EfQtXYpwZgW2UFzS8A2EMn",
+    "side": "withdraw",
+    "amount": "100000000",
+    "abs_amount": "1",
+    "txid": "73ea2bcb20b36115bc50588a8bcdbfbaaeb3d75656c2b104ef4a1234e5dbe550",
+    "vout_n": 0,
+    "request_id": "test_request_id",
+    "status": "pending",
+    "created_time": 1542165707058,
+    "last_time": 1542165707058,
+    "confirming_threshold": 3,
+    "confirmed_num": 3,
+    "type": "external"
+  }
+}
+```
+</ResponseExample>
