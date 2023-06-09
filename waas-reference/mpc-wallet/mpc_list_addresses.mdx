@@ -1,0 +1,84 @@
+---
+title: 
+api: GET /v1/custody/mpc/list_addresses/ 
+description: Get Address List 
+---
+#### Request 
+
+<ParamField body="chain_code" type="String" required>chain code</ParamField> 
+<ParamField body="start_id" type="String" >ID of an address to start with; the latest address information will be returned if neither the start ID nor the end ID is specified</ParamField> 
+<ParamField body="end_id" type="String" >ID of an address to end with; the latest address information will be returned if neither the start ID nor the end ID is specified</ParamField> 
+<ParamField body="limit" type="Int" >number of entries per page; max: 50; default: 50</ParamField> 
+<ParamField body="sort" type="Int" >address sorting method; 1: based on creation time, from earliest to latest; other value: based on creation time, from latest to earliest (default)</ParamField> 
+
+#### Response 
+
+<ResponseField name="total" type="Int" >Total number of addresses</ResponseField> 
+<ResponseField name="id" type="String" >Address ID</ResponseField> 
+<ResponseField name="address" type="String" >Address</ResponseField> 
+<ResponseField name="hd_path" type="String" >Path</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/mpc/list_addresses/",
+    {
+        "chain_code": "ETH",
+        "start_id": "721887227156373678",
+        "end_id": "",
+        "limit": 2,
+        "sort": 0
+    },
+    api_key, api_secret, host
+)
+```
+```javascript JavaScript
+coboFetch('GET', '/v1/custody/mpc/list_addresses/', {
+    "chain_code": "ETH",
+    "start_id": "721887227156373678",
+    "end_id": "",
+    "limit": 2,
+    "sort": 0
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/mpc/list_addresses/", map[string]string{
+    "chain_code": "ETH",
+    "start_id": "721887227156373678",
+    "end_id": "",
+    "limit": 2,
+    "sort": 0
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "total": 2,
+  "addresses": [
+    {
+      "id": 721941011752862138,
+      "address": "0x297db9241bfe5665641951bcf166feebd003870c",
+      "encoding": 0,
+      "hd_path": "m/44/60/1/0/85"
+    },
+    {
+      "id": 721941011752862137,
+      "address": "0x14cf9de0d8062ca53af5c92dcc574c8f3acb6da5",
+      "encoding": 0,
+      "hd_path": "m/44/60/1/0/84"
+    }
+  ]
+}
+
+
+```
+</ResponseExample>

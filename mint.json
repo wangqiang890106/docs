@@ -18,55 +18,56 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
+    "name": "Log In",
     "url": "https://home.custody.cobo.com/#/login"
   },
   "anchors": [
     {
-      "name": "SDKs & Kits",
+      "name": "Smart Contracts",
       "icon": "puzzle",
+      "url": "contracts"
+    },
+    {
+      "name": "APIs",
+      "icon": "rectangle-terminal",
+      "url": "waas-reference"
+    },
+    {
+      "name": "SDKs",
+      "icon": "rectangle-terminal",
       "url": "sdk"
     },
     {
-      "name": "WaaS API",
+      "name": "Tools",
       "icon": "rectangle-terminal",
-      "url": "api-reference"
+      "url": "tools"
     },
     {
-      "name": "Blog",
+      "name": "News",
       "icon": "blogger",
       "url": "https://news.cobo.com/home/en/"
     },
     {
       "name": "GitHub",
       "icon": "github",
-      "url": "https://github.com/CoboCustody/"
+      "url": "https://github.com/CoboGlobal/"
     }
   ],
   "navigation": [
     {
       "group": "Overview",
-      "pages": [
-        "introduction"
-      ]
+      "pages": ["introduction"]
     },
     {
       "group": "Products & Services",
-      "pages": [
-        "cobo_full_custody",
-        "cobo_co_managed_custody",
-        "cobo_lite",
-        "cobo_superloop",
-        "cobo_waas",
-        "cobo_argus"
-      ]
+      "pages": ["cobo_full_custody", "cobo_co_managed_custody", "cobo_argus"]
     },
     {
       "group": "Overview",
       "pages": [
-        "api-reference/start-waas",
-        "api-reference/authentication",
-        "api-reference/test"
+        "waas-reference/start-waas",
+        "waas-reference/authentication",
+        "waas-reference/test"
       ]
     },
     {
@@ -78,43 +79,43 @@
             {
               "group": "Account",
               "pages": [
-                "api-reference/standard-wallet/org_info",
-                "api-reference/standard-wallet/coin_info",
-                "api-reference/standard-wallet/get_supported_coins",
-                "api-reference/standard-wallet/new_address",
-                "api-reference/standard-wallet/new_addresses",
-                "api-reference/standard-wallet/address_info",
-                "api-reference/standard-wallet/addresses_info",
-                "api-reference/standard-wallet/is_valid_address",
-                "api-reference/standard-wallet/address_history"
+                "waas-reference/standard-wallet/org_info",
+                "waas-reference/standard-wallet/coin_info",
+                "waas-reference/standard-wallet/get_supported_coins",
+                "waas-reference/standard-wallet/new_address",
+                "waas-reference/standard-wallet/new_addresses",
+                "waas-reference/standard-wallet/address_info",
+                "waas-reference/standard-wallet/addresses_info",
+                "waas-reference/standard-wallet/is_valid_address",
+                "waas-reference/standard-wallet/address_history"
               ]
             },
             {
               "group": "Loop Alliance",
               "pages": [
-                "api-reference/standard-wallet/internal_address_info",
-                "api-reference/standard-wallet/internal_address_info_batch",
-                "api-reference/standard-wallet/loop-explorer"
+                "waas-reference/standard-wallet/internal_address_info",
+                "waas-reference/standard-wallet/internal_address_info_batch",
+                "waas-reference/standard-wallet/loop-explorer"
               ]
             },
             {
               "group": "Transactions",
               "pages": [
-                "api-reference/standard-wallet/transaction",
-                "api-reference/standard-wallet/transactions_by_id",
-                "api-reference/standard-wallet/transactions_by_request_ids",
-                "api-reference/standard-wallet/transaction_by_txid",
-                "api-reference/standard-wallet/transactions_by_time",
-                "api-reference/standard-wallet/pending_transaction",
-                "api-reference/standard-wallet/pending_transactions",
-                "api-reference/standard-wallet/transaction_history"
+                "waas-reference/standard-wallet/transaction",
+                "waas-reference/standard-wallet/transactions_by_id",
+                "waas-reference/standard-wallet/transactions_by_request_ids",
+                "waas-reference/standard-wallet/transaction_by_txid",
+                "waas-reference/standard-wallet/transactions_by_time",
+                "waas-reference/standard-wallet/pending_transaction",
+                "waas-reference/standard-wallet/pending_transactions",
+                "waas-reference/standard-wallet/transaction_history"
               ]
             },
             {
               "group": "Withdrawal",
               "pages": [
-                "api-reference/standard-wallet/new_withdraw_request",
-                "api-reference/standard-wallet/withdraw_info_by_request_id"
+                "waas-reference/standard-wallet/new_withdraw_request",
+                "waas-reference/standard-wallet/withdraw_info_by_request_id"
               ]
             }
           ]
@@ -125,31 +126,31 @@
             {
               "group": "Account",
               "pages": [
-                "api-reference/web3-wallet/web3_supported_chains",
-                "api-reference/web3-wallet/web3_supported_coins",
-                "api-reference/web3-wallet/web3_supported_nft_collections",
-                "api-reference/web3-wallet/web3_supported_contracts",
-                "api-reference/web3-wallet/web3_supported_contract_methods",
-                "api-reference/web3-wallet/web3_add_addresses",
-                "api-reference/web3-wallet/web3_list_wallet_address",
-                "api-reference/web3-wallet/web3_list_wallet_assets",
-                "api-reference/web3-wallet/web3_list_wallet_nfts",
-                "api-reference/web3-wallet/web3_wallet_nft_detail"
+                "waas-reference/web3-wallet/web3_supported_chains",
+                "waas-reference/web3-wallet/web3_supported_coins",
+                "waas-reference/web3-wallet/web3_supported_nft_collections",
+                "waas-reference/web3-wallet/web3_supported_contracts",
+                "waas-reference/web3-wallet/web3_supported_contract_methods",
+                "waas-reference/web3-wallet/web3_add_addresses",
+                "waas-reference/web3-wallet/web3_list_wallet_address",
+                "waas-reference/web3-wallet/web3_list_wallet_assets",
+                "waas-reference/web3-wallet/web3_list_wallet_nfts",
+                "waas-reference/web3-wallet/web3_wallet_nft_detail"
               ]
             },
             {
               "group": "Transactions",
               "pages": [
-                "api-reference/web3-wallet/web3_list_wallet_transactions"
+                "waas-reference/web3-wallet/web3_list_wallet_transactions"
               ]
             },
             {
               "group": "Withdrawal",
               "pages": [
-                "api-reference/web3-wallet/web3_withdraw",
-                "api-reference/web3-wallet/web3_get_withdraw_transaction",
-                "api-reference/web3-wallet/web3_contract",
-                "api-reference/web3-wallet/web3_get_contract_transaction"
+                "waas-reference/web3-wallet/web3_withdraw",
+                "waas-reference/web3-wallet/web3_get_withdraw_transaction",
+                "waas-reference/web3-wallet/web3_contract",
+                "waas-reference/web3-wallet/web3_get_contract_transaction"
               ]
             }
           ]
@@ -160,52 +161,50 @@
             {
               "group": "Account",
               "pages": [
-                "api-reference/mpc-wallet/mpc_get_supported_chains",
-                "api-reference/mpc-wallet/mpc_get_supported_coins",
-                "api-reference/mpc-wallet/mpc_get_wallet_supported_coins",
-                "api-reference/mpc-wallet/mpc_is_valid_address",
-                "api-reference/mpc-wallet/mpc_generate_addresses",
-                "api-reference/mpc-wallet/mpc_list_addresses",
-                "api-reference/mpc-wallet/mpc_get_balance",
-                "api-reference/mpc-wallet/mpc_list_balances",
-                "api-reference/mpc-wallet/mpc_list_spendable",
-                "api-reference/mpc-wallet/mpc_estimate_fee"
+                "waas-reference/mpc-wallet/mpc_get_supported_chains",
+                "waas-reference/mpc-wallet/mpc_get_supported_coins",
+                "waas-reference/mpc-wallet/mpc_get_wallet_supported_coins",
+                "waas-reference/mpc-wallet/mpc_is_valid_address",
+                "waas-reference/mpc-wallet/mpc_generate_addresses",
+                "waas-reference/mpc-wallet/mpc_list_addresses",
+                "waas-reference/mpc-wallet/mpc_get_balance",
+                "waas-reference/mpc-wallet/mpc_list_balances",
+                "waas-reference/mpc-wallet/mpc_list_spendable",
+                "waas-reference/mpc-wallet/mpc_estimate_fee"
               ]
             },
             {
               "group": "Transaction",
               "pages": [
-                "api-reference/mpc-wallet/mpc_list_transactions",
-                "api-reference/mpc-wallet/mpc_transactions_by_request_ids",
-                "api-reference/mpc-wallet/mpc_transactions_by_cobo_ids",
-                "api-reference/mpc-wallet/mpc_transactions_by_tx_hash"
+                "waas-reference/mpc-wallet/mpc_list_transactions",
+                "waas-reference/mpc-wallet/mpc_transactions_by_request_ids",
+                "waas-reference/mpc-wallet/mpc_transactions_by_cobo_ids",
+                "waas-reference/mpc-wallet/mpc_transactions_by_tx_hash"
               ]
             },
             {
               "group": "Withdrawal",
               "pages": [
-                "api-reference/mpc-wallet/mpc_create_transaction",
-                "api-reference/mpc-wallet/mpc_speedup_transaction",
-                "api-reference/mpc-wallet/mpc_drop_transaction",
-                "api-reference/mpc-wallet/mpc_retry_double_check"
+                "waas-reference/mpc-wallet/mpc_create_transaction",
+                "waas-reference/mpc-wallet/mpc_speedup_transaction",
+                "waas-reference/mpc-wallet/mpc_drop_transaction",
+                "waas-reference/mpc-wallet/mpc_retry_double_check"
               ]
             },
             {
               "group": "Tss Node",
-              "pages": [
-                "api-reference/mpc-wallet/mpc_list_tss_node_requests"
-              ]
+              "pages": ["waas-reference/mpc-wallet/mpc_list_tss_node_requests"]
             },
             {
               "group": "Bind Auth",
               "pages": [
-                "api-reference/mpc-wallet/auth_create_binding",
-                "api-reference/mpc-wallet/auth_query_binding",
-                "api-reference/mpc-wallet/auth_query_user_auth",
-                "api-reference/mpc-wallet/auth_bind_addresses",
-                "api-reference/mpc-wallet/auth_change_binding",
-                "api-reference/mpc-wallet/auth_unbind_binding",
-                "api-reference/mpc-wallet/auth_query_statement"
+                "waas-reference/mpc-wallet/auth_create_binding",
+                "waas-reference/mpc-wallet/auth_query_binding",
+                "waas-reference/mpc-wallet/auth_query_user_auth",
+                "waas-reference/mpc-wallet/auth_bind_addresses",
+                "waas-reference/mpc-wallet/auth_change_binding",
+                "waas-reference/mpc-wallet/auth_unbind_binding",
+                "waas-reference/mpc-wallet/auth_query_statement"
               ]
             }
           ]
@@ -216,52 +215,52 @@
             {
               "group": "Account",
               "pages": [
-                "api-reference/mpc-web3-wallet/mpc_get_supported_chains",
-                "api-reference/mpc-web3-wallet/mpc_get_supported_coins",
-                "api-reference/mpc-web3-wallet/mpc_get_supported_nft_collections",
-                "api-reference/mpc-web3-wallet/mpc_is_valid_address",
-                "api-reference/mpc-web3-wallet/mpc_generate_addresses",
-                "api-reference/mpc-web3-wallet/mpc_list_addresses",
-                "api-reference/mpc-web3-wallet/mpc_get_balance",
-                "api-reference/mpc-web3-wallet/mpc_list_balances",
-                "api-reference/mpc-web3-wallet/mpc_list_spendable",
-                "api-reference/mpc-web3-wallet/mpc_estimate_fee"
+                "waas-reference/mpc-web3-wallet/mpc_get_supported_chains",
+                "waas-reference/mpc-web3-wallet/mpc_get_supported_coins",
+                "waas-reference/mpc-web3-wallet/mpc_get_supported_nft_collections",
+                "waas-reference/mpc-web3-wallet/mpc_is_valid_address",
+                "waas-reference/mpc-web3-wallet/mpc_generate_addresses",
+                "waas-reference/mpc-web3-wallet/mpc_list_addresses",
+                "waas-reference/mpc-web3-wallet/mpc_get_balance",
+                "waas-reference/mpc-web3-wallet/mpc_list_balances",
+                "waas-reference/mpc-web3-wallet/mpc_list_spendable",
+                "waas-reference/mpc-web3-wallet/mpc_estimate_fee"
               ]
             },
             {
               "group": "Transaction",
               "pages": [
-                "api-reference/mpc-web3-wallet/mpc_list_transactions",
-                "api-reference/mpc-web3-wallet/mpc_transactions_by_request_ids",
-                "api-reference/mpc-web3-wallet/mpc_transactions_by_cobo_ids",
-                "api-reference/mpc-web3-wallet/mpc_transactions_by_tx_hash"
+                "waas-reference/mpc-web3-wallet/mpc_list_transactions",
+                "waas-reference/mpc-web3-wallet/mpc_transactions_by_request_ids",
+                "waas-reference/mpc-web3-wallet/mpc_transactions_by_cobo_ids",
+                "waas-reference/mpc-web3-wallet/mpc_transactions_by_tx_hash"
               ]
             },
             {
               "group": "Withdrawal",
               "pages": [
-                "api-reference/mpc-web3-wallet/mpc_create_transaction",
-                "api-reference/mpc-web3-wallet/mpc_speedup_transaction",
-                "api-reference/mpc-web3-wallet/mpc_drop_transaction",
-                "api-reference/mpc-web3-wallet/mpc_sign_message"
+                "waas-reference/mpc-web3-wallet/mpc_create_transaction",
+                "waas-reference/mpc-web3-wallet/mpc_speedup_transaction",
+                "waas-reference/mpc-web3-wallet/mpc_drop_transaction",
+                "waas-reference/mpc-web3-wallet/mpc_sign_message"
               ]
             },
             {
               "group": "Tss Node",
               "pages": [
-                "api-reference/mpc-web3-wallet/mpc_list_tss_node_requests"
+                "waas-reference/mpc-web3-wallet/mpc_list_tss_node_requests"
               ]
             },
             {
               "group": "Bind Auth",
               "pages": [
-                "api-reference/mpc-web3-wallet/auth_create_binding",
-                "api-reference/mpc-web3-wallet/auth_query_binding",
-                "api-reference/mpc-web3-wallet/auth_query_user_auth",
-                "api-reference/mpc-web3-wallet/auth_bind_addresses",
-                "api-reference/mpc-web3-wallet/auth_change_binding",
-                "api-reference/mpc-web3-wallet/auth_unbind_binding",
-                "api-reference/mpc-web3-wallet/auth_query_statement"
+                "waas-reference/mpc-web3-wallet/auth_create_binding",
+                "waas-reference/mpc-web3-wallet/auth_query_binding",
+                "waas-reference/mpc-web3-wallet/auth_query_user_auth",
+                "waas-reference/mpc-web3-wallet/auth_bind_addresses",
+                "waas-reference/mpc-web3-wallet/auth_change_binding",
+                "waas-reference/mpc-web3-wallet/auth_unbind_binding",
+                "waas-reference/mpc-web3-wallet/auth_query_statement"
               ]
             }
           ]
@@ -269,24 +268,24 @@
         {
           "group": "Staking",
           "pages": [
-            "api-reference/staking/staking_product",
-            "api-reference/staking/staking_products",
-            "api-reference/staking/staking_stake",
-            "api-reference/staking/staking_unstake",
-            "api-reference/staking/stakings",
-            "api-reference/staking/unstakings",
-            "api-reference/staking/staking_history"
+            "waas-reference/staking/staking_product",
+            "waas-reference/staking/staking_products",
+            "waas-reference/staking/staking_stake",
+            "waas-reference/staking/staking_unstake",
+            "waas-reference/staking/stakings",
+            "waas-reference/staking/unstakings",
+            "waas-reference/staking/staking_history"
           ]
         },
         {
           "group": "Trading",
           "pages": [
-            "api-reference/trading/trading_withdraw",
-            "api-reference/trading/trading_withdraw_info",
-            "api-reference/trading/trading_deposit",
-            "api-reference/trading/trading_deposit_info",
-            "api-reference/trading/trading_transfer",
-            "api-reference/trading/trading_transfer_info"
+            "waas-reference/trading/trading_withdraw",
+            "waas-reference/trading/trading_withdraw_info",
+            "waas-reference/trading/trading_deposit",
+            "waas-reference/trading/trading_deposit_info",
+            "waas-reference/trading/trading_transfer",
+            "waas-reference/trading/trading_transfer_info"
           ]
         }
       ]
@@ -294,43 +293,32 @@
     {
       "group": "Appendix",
       "pages": [
-        "api-reference/error-codes",
-        "api-reference/transaction-notification",
-        "api-reference/withdrawal-confirmation",
-        "api-reference/callback-signature",
-        "api-reference/faq"
+        "waas-reference/error-codes",
+        "waas-reference/transaction-notification",
+        "waas-reference/withdrawal-confirmation",
+        "waas-reference/callback-signature",
+        "waas-reference/faq"
       ]
     },
     {
       "group": "Overview",
-      "pages": [
-        "sdk/introduction"
-      ]
+      "pages": ["tools/recovery-kit"]
     },
     {
-      "group": "SDKs",
-      "pages": [
-        "sdk/java",
-        "sdk/php",
-        "sdk/python",
-        "sdk/javascript",
-        "sdk/go"
-      ]
+      "group": "Overview",
+      "pages": ["sdk/introduction"]
     },
     {
-      "group": "Kits",
-      "pages": [
-        "sdk/mpc_recovery"
-      ]
+      "group": "Languages",
+      "pages": ["sdk/java", "sdk/php", "sdk/python", "sdk/javascript", "sdk/go"]
+    },
+    {
+      "group": "Overview",
+      "pages": ["contracts/introduction"]
     },
     {
       "group": "Community",
-      "pages": [
-        "twitter",
-        "linkedln",
-        "discard",
-        "contact"
-      ]
+      "pages": ["twitter", "linkedln", "discard", "contact"]
     }
   ],
   "footerSocials": {

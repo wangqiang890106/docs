@@ -1,0 +1,92 @@
+---
+title: 
+api: GET /v1/custody/mpc/list_balances/ 
+description: Obtain all balance information of the specified coin 
+---
+#### Request 
+
+<ParamField body="coin" type="String" >name of the coin to be queried</ParamField> 
+<ParamField body="chain_code" type="String" >Chain code</ParamField> 
+<ParamField body="page_index" type="Int" required>page number</ParamField> 
+<ParamField body="page_length" type="Int" required>number of entries per page; max: 50</ParamField> 
+
+#### Response 
+
+<ResponseField name="total" type="Int" >Total number of entries</ResponseField> 
+<ResponseField name="address" type="String" >Address</ResponseField> 
+<ResponseField name="coin" type="String" >Coin name (Cobo Custody)</ResponseField> 
+<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
+<ResponseField name="description" type="String" >Full name (reference only, subject to change)</ResponseField> 
+<ResponseField name="balance" type="String" >Coin balance</ResponseField> 
+<ResponseField name="decimal" type="Int" >Decimal precision</ResponseField> 
+<ResponseField name="nft_code" type="String" >NFT code</ResponseField> 
+<ResponseField name="token_id" type="String" >NFT token Id</ResponseField> 
+<ResponseField name="contract_address" type="String" >NFT contract address</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/mpc/list_balances/",
+    {
+        "coin": "ETH",
+        "chain_code": "ETH",
+        "page_index": 0,
+        "page_length": 50
+    },
+    api_key, api_secret, host
+)
+```
+```javascript JavaScript
+coboFetch('GET', '/v1/custody/mpc/list_balances/', {
+    "coin": "ETH",
+    "chain_code": "ETH",
+    "page_index": 0,
+    "page_length": 50
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/mpc/list_balances/", map[string]string{
+    "coin": "ETH",
+    "chain_code": "ETH",
+    "page_index": 0,
+    "page_length": 50
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "total": 2,
+  "coin_data": [
+    {
+      "address": "0xe0cc496b3d9b0f8019b678066b9db81261d827bc",
+      "coin": "ETH",
+      "chain_code": "ETH",
+      "display_code": "ETH",
+      "description": "Ethereum",
+      "balance": "49999999999999999986",
+      "decimal": 18
+    }
+  ],
+  "nft_data": [
+    {
+      "nft_code": "NFT_ETH_BLUE_CHURCH",
+      "token_id": "200",
+      "address": "0xcc656c94b8ec881ddd9611e8ad4a4eca9f859e7b",
+      "chain_code": "ETH",
+      "contract_address": "0x357fd2942e8ee435d7d21859ecae99bd597d8779",
+      "balance": "1"
+    }
+  ]
+}
+
+```
+</ResponseExample>

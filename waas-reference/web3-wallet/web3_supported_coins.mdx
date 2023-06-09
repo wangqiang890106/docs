@@ -1,0 +1,85 @@
+---
+title: 
+api: GET /v1/custody/web3_supported_coins/ 
+description: Get Supported Coins 
+---
+#### Request 
+
+<ParamField body="chain_code" type="String" required>Chain code</ParamField> 
+
+#### Response 
+
+<ResponseField name="coin" type="String" >Coin code</ResponseField> 
+<ResponseField name="description" type="String" >Full name of coin (not unique, changeable, for reference only )</ResponseField> 
+<ResponseField name="decimal" type="Int" >Coin balance decimal places</ResponseField> 
+<ResponseField name="can_deposit" type="Boolean" >Deposit accessibility</ResponseField> 
+<ResponseField name="can_withdraw" type="Boolean" >Withdrawal accessibility</ResponseField> 
+<ResponseField name="minimum_deposit_threshold" type="String" >Coin minimum deposit threshold</ResponseField> 
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/web3_supported_coins/",
+    {
+        "chain_code": "ETH"
+    },
+    api_key, api_secret, host
+)
+```
+```javascript JavaScript
+coboFetch("GET", "/v1/custody/web3_supported_coins/", {
+    "chain_code": "ETH"
+}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request(
+    "GET", 
+    "/v1/custody/web3_supported_coins/", 
+    map[string]string{
+        "chain_code": "ETH"
+    })
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "coins": [
+    {
+      "coin": "ETH_WBTC",
+      "display_code": "WBTC",
+      "description": "Wrapped Bitcoin",
+      "decimal": 8,
+      "can_deposit": True,
+      "can_withdraw": True,
+      "minimum_deposit_threshold": "0"
+    },
+    {
+      "coin": "ETH",
+      "display_code": "ETH",
+      "description": "Ethereum",
+      "decimal": 18,
+      "can_deposit": True,
+      "can_withdraw": True,
+      "minimum_deposit_threshold": "1000000000000000"
+    },
+    {
+      "coin": "ETH_USDT",
+      "display_code": "USDT",
+      "description": "",
+      "decimal": 6,
+      "can_deposit": True,
+      "can_withdraw": True,
+      "minimum_deposit_threshold": "1000"
+    }
+  ]
+}
+```
+</ResponseExample>

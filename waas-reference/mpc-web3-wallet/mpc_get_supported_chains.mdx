@@ -1,0 +1,48 @@
+---
+title: 
+api: GET /v1/custody/mpc/get_supported_chains/ 
+description: Get Supported Chains 
+---
+#### Request 
+
+
+#### Response 
+
+<RequestExample>
+```python Python
+request(
+    "GET",
+    "/v1/custody/mpc/get_supported_chains/", {},
+    api_key, api_secret, host
+)
+```
+```javascript JavaScript
+coboFetch('GET', '/v1/custody/mpc/get_supported_chains/', {}, api_key, api_secret, host)
+    .then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("GET", "/v1/custody/mpc/get_supported_chains/", map[string]string{})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "chain_codes": [
+    "BSC_BNB",
+    "ETH",
+    "GETH",
+    "TBSC_BNB",
+    "MATIC",
+    "ARBITRUM_ETH"
+  ]
+}
+
+```
+</ResponseExample>

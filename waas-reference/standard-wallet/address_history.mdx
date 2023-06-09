@@ -1,0 +1,84 @@
+---
+title: Get Address History
+api: "GET /CustodyApi/address_history/"
+description: Returns a list of addresses associated with the specified coin and custody wallet.
+---
+
+#### Request
+<ParamField body="coin" type="String" required>Coin code</ParamField>
+<ParamField body="page_index" type="Int">Page index, zero for the first page.  </ParamField>
+<ParamField body="page_length" type="Int">Number of rows per page. (Not less than 1 and not more than 50)</ParamField>
+<ParamField body="sort_flag" type="Int">Address sorting method: If it is 1, it will be returned in a positive order of address creation time, or else it will be returned in a reverse order of address creation time. </ParamField>
+
+
+#### Response
+<ResponseField name="coin" type="String" required>
+ Coin code
+</ResponseField>
+<ResponseField name="address" type="String" required>
+Deposit address(Seperate memo by vertical bar)
+</ResponseField>
+
+
+<RequestExample>
+```python Python
+request(
+  "GET",
+  "/v1/custody/address_history/",
+  {
+    "coin": "ETH",
+    "page_index": 0,
+    "page_length": 20,
+  },
+  api_key, api_secret, host
+)
+```
+
+```javascript JavaScript
+coboFetch('GET', '/v1/custody/address_history/',
+        {
+          "coin": "ETH",
+          "page_index": 0,
+          "page_length": 20,
+        },
+        api_key, api_secret, host
+    ).then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+
+```go Go
+Request("GET", "/v1/custody/address_history/", map[string]string{
+    "coin": "ETH",
+    "page_index": 0,
+    "page_length": 20,
+})
+```
+</RequestExample>
+
+
+<ResponseExample>
+```json
+{
+  "success": true,
+  "result": [
+    {
+      "coin": "ETH",
+      "address": "0x544094588811118b7701cf4a9dea056e775b4b4e"
+    },
+    {
+      "coin": "ETH",
+      "address": "0x644094588811118b7701cf4a9dea056e775b4b4e"
+    },
+    {
+      "coin": "ETH",
+      "address": "0x574094588811118b7701cf4a9dea056e775b4b4e"
+    }
+  ]
+}
+```
+</ResponseExample>

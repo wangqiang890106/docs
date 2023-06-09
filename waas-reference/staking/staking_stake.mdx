@@ -1,0 +1,55 @@
+---
+title: 
+api: POST /v1/custody/staking_stake/ 
+description: Stake 
+---
+#### Request 
+
+<ParamField body="product_id" type="Int" required>Product ID</ParamField> 
+<ParamField body="amount" type="Int" required>Stake amount</ParamField> 
+
+#### Response 
+
+<RequestExample>
+```python Python
+request(
+    "POST",
+    "/v1/custody/staking_stake/",
+    {
+        "product_id": 2751
+        "amount": 4000000000
+    },
+    api_key, api_secret, host
+)
+```
+```javascript JavaScript
+coboFetch('POST', '/v1/custody/staking_stake/',
+        {
+            "product_id": 2751
+            "amount": 4000000000
+        },
+        api_key, api_secret, host
+    ).then(res => {
+        res.json().then((data)=>{
+            console.log(JSON.stringify(data, null, 4));
+        })
+    }).catch(err => {
+        console.log(err)
+    });
+```
+```go Go
+Request("POST", "/v1/custody/staking_stake/", map[string]string{
+    "product_id": 2751
+    "amount": 4000000000
+})
+```
+</RequestExample>
+
+<ResponseExample>
+```json
+{
+  "success": true,
+  "result": null
+}
+```
+</ResponseExample>
