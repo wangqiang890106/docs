@@ -401,7 +401,7 @@
     "raiseIssue": true
   },
   "api": {
-    "baseUrl": "https://api.sandbox.cobo.com",
+    "baseUrl": ["https://api.cobo.com","https://api.sandbox.cobo.com","https://api.develop.cobo.com"],
     "auth": {
       "method": "basic",
       "name": "Biz-Api-Key:BIZ-API-SIGNATURE:BIZ-API-NONCE"
