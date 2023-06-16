@@ -51,15 +51,21 @@
   "navigation": [
     {
       "group": "Overview",
-      "pages": ["introduction"]
+      "pages": [
+        "introduction"
+      ]
     },
     {
       "group": "Overview",
-      "pages": ["full-custody/introduction"]
+      "pages": [
+        "full-custody/introduction"
+      ]
     },
     {
       "group": "Get Started",
-      "pages": ["full-custody/start-waas"]
+      "pages": [
+        "full-custody/start-waas"
+      ]
     },
     {
       "group": "APIs",
@@ -175,19 +181,27 @@
     },
     {
       "group": "Tools",
-      "pages": ["full-custody/tools/overview"]
+      "pages": [
+        "full-custody/tools/overview"
+      ]
     },
     {
       "group": "Use Cases",
-      "pages": ["full-custody/use-cases/overview"]
+      "pages": [
+        "full-custody/use-cases/overview"
+      ]
     },
     {
       "group": "Overview",
-      "pages": ["mpc-custody/introduction"]
+      "pages": [
+        "mpc-custody/introduction"
+      ]
     },
     {
       "group": "Get Started",
-      "pages": ["mpc-custody/get-started"]
+      "pages": [
+        "mpc-custody/get-started"
+      ]
     },
     {
       "group": "APIs",
@@ -228,7 +242,9 @@
         },
         {
           "group": "Tss Node",
-          "pages": ["mpc-custody/api/mpc_list_tss_node_requests"]
+          "pages": [
+            "mpc-custody/api/mpc_list_tss_node_requests"
+          ]
         },
         {
           "group": "Bind Auth",
@@ -280,7 +296,9 @@
             },
             {
               "group": "Tss Node",
-              "pages": ["mpc-custody/api/web3/mpc_list_tss_node_requests"]
+              "pages": [
+                "mpc-custody/api/web3/mpc_list_tss_node_requests"
+              ]
             },
             {
               "group": "Bind Auth",
@@ -300,43 +318,77 @@
     },
     {
       "group": "SDKs",
-      "pages": ["mpc-custody/sdk/overview"]
+      "pages": [
+        "mpc-custody/sdk/overview"
+      ]
     },
     {
       "group": "Tools",
-      "pages": ["mpc-custody/tools/recovery-kit"]
+      "pages": [
+        "mpc-custody/tools/recovery-kit"
+      ]
     },
     {
       "group": "Use Cases",
-      "pages": ["mpc-custody/use-cases/overview"]
+      "pages": [
+        "mpc-custody/use-cases/overview"
+      ]
     },
     {
       "group": "Overview",
-      "pages": ["smart-contract-custody/introduction"]
+      "pages": [
+        "smart-contract-custody/coboargus",
+        "smart-contract-custody/cobosafe"
+      ]
     },
     {
       "group": "Get Started",
-      "pages": ["smart-contract-custody/get-started"]
+      "pages": [
+        "smart-contract-custody/get-started"
+      ]
     },
     {
-      "group": "APIs",
-      "pages": ["smart-contract-custody/api/overview"]
+      "group": "Contracts",
+      "pages": [
+        "smart-contract-custody/contracts/overview",
+        "smart-contract-custody/contracts/account",
+        "smart-contract-custody/contracts/role",
+        {
+          "group": "Authorizer",
+          "pages": [
+            "smart-contract-custody/contracts/authorizer/overview",
+            "smart-contract-custody/contracts/authorizer/acl",
+            "smart-contract-custody/contracts/authorizer/others",
+            "smart-contract-custody/contracts/authorizer/hint"
+          ]
+        },
+        "smart-contract-custody/contracts/argus",
+        "smart-contract-custody/contracts/deployed",
+        "smart-contract-custody/contracts/audit"
+      ]
     },
     {
       "group": "SDKs",
-      "pages": ["smart-contract-custody/sdk/overview"]
+      "pages": [
+        "smart-contract-custody/sdk/js",
+        "smart-contract-custody/sdk/python"
+      ]
     },
     {
       "group": "Tools",
-      "pages": ["smart-contract-custody/tools/overview"]
-    },
-    {
-      "group": "Use Cases",
-      "pages": ["smart-contract-custody/use-cases/overview"]
+      "pages": [
+        "smart-contract-custody/tools/overview"
+      ]
     },
     {
       "group": "Community",
-      "pages": ["twitter", "linkedln", "discord", "contact"]
+      "pages": [
+        "twitter",
+        "linkedln",
+        "discord",
+        "telegram",
+        "contact"
+      ]
     }
   ],
   "footerSocials": {
