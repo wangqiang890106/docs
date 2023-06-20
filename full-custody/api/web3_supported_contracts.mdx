@@ -1,13 +1,15 @@
 ---
-title: 
+title: Get Supported Contracts
 api: GET /v1/custody/web3_supported_contracts/ 
-description: Get Supported Contracts 
+description: "This endpoint returns a JSON response with a list of contract addresses for the specified chain code. If the chain code is not supported, it will raise a CustodyApiException with an error message."
 ---
 #### Request 
 
-<ParamField body="chain_code" type="String" required>Chain code</ParamField> 
+<ParamField body="chain_code" type="String" required>The chain code for which to retrieve contract addresses.</ParamField>
 
-#### Response 
+#### Response
+<ResponseField name="contract_addresses" type="String" >Supported Contract addresses(The result applies to the contract_address content in the other web3 api request parameters)</ResponseField>
+
 
 <RequestExample>
 ```python Python

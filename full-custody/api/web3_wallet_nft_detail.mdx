@@ -1,21 +1,21 @@
 ---
-title: 
+title: Get Wallet NFT Detail
 api: GET /v1/custody/web3_wallet_nft_detail/ 
-description: Get Wallet NFT Detail 
+description: "This endpoint returns detailed information about a specific NFT (Non-Fungible Token) in a wallet. It takes two parameters, 'nft_code' and 'token_id', and returns a JSON response with information such as the NFT's code, chain code, display code, description, contract address, standard, and token ID."
 ---
-#### Request 
+#### Request
+<ParamField body="nft_code" type="String" required>The code of the NFT.</ParamField> 
+<ParamField body="token_id" type="String" required>The ID of the token.</ParamField> 
 
-<ParamField body="nft_code" type="String" required>NFT Collection Code</ParamField> 
-<ParamField body="token_id" type="String" required>NFT Token Id</ParamField> 
+#### Response
+<ResponseField name="nft_code" type="String" >The code of the NFT.</ResponseField> 
+<ResponseField name="chain_code" type="String" >The chain code of the NFT.</ResponseField>
+<ResponseField name="display_code" type="String" >NFT ticker symbol (not unique, changeable, for reference only ).</ResponseField>
+<ResponseField name="description" type="String" >The description of the NFT.</ResponseField> 
+<ResponseField name="standard" type="String" >The standard of the NFT.</ResponseField> 
+<ResponseField name="contract_address" type="String" >The contract address of the NFT.</ResponseField> 
+<ResponseField name="token_id" type="String" >The ID of the token.</ResponseField>
 
-#### Response 
-
-<ResponseField name="nft_code" type="String" >NFT Collection Code</ResponseField> 
-<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
-<ResponseField name="description" type="String" >Full name of NFT (not unique, changeable, for reference only )</ResponseField> 
-<ResponseField name="standard" type="String" >NFT amount</ResponseField> 
-<ResponseField name="contract_address" type="String" >NFT Contract Address</ResponseField> 
-<ResponseField name="token_id" type="String" >NFT Token Id</ResponseField> 
 <RequestExample>
 ```python Python
 request(

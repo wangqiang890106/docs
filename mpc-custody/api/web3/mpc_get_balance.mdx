@@ -1,25 +1,25 @@
 ---
-title: 
+title: Get Balance
 api: GET /v1/custody/mpc/get_balance/ 
-description: Get Balance 
+description: "This endpoint returns the balance of a given address in a custody wallet. The response contains information about the coins and NFTs held by the address, including their balance, decimal, and description."
 ---
-#### Request 
+#### Request
+<ParamField body="address" type="String" required>The address to get the balance of.</ParamField>
+<ParamField body="chain_code" type="String" >The chain code of the coin to filter by.</ParamField>
+<ParamField body="coin" type="String" >The asset coin of the coin to filter by.</ParamField>
 
-<ParamField body="address" type="String" required>address</ParamField> 
-<ParamField body="chain_code" type="String" >chain code</ParamField> 
-<ParamField body="coin" type="String" >coin name</ParamField> 
+#### Response
+<ResponseField name="address" type="String" >The address of the coin.</ResponseField>
+<ResponseField name="coin" type="String" >The asset coin of the coin.</ResponseField>
+<ResponseField name="chain_code" type="String" >The chain code of the coin.</ResponseField>
+<ResponseField name="display_code" type="String" >Abbreviation (reference only, subject to change)</ResponseField>
+<ResponseField name="description" type="String" >Full name (reference only, subject to change)</ResponseField>
+<ResponseField name="balance" type="String" >The balance of the coin.</ResponseField>
+<ResponseField name="decimal" type="Int" >The decimal of the coin.</ResponseField>
+<ResponseField name="nft_code" type="String" >The NFT code.</ResponseField>
+<ResponseField name="token_id" type="String" >The token ID of the NFT.</ResponseField>
+<ResponseField name="contract_address" type="String" >The contract address of the NFT.</ResponseField>
 
-#### Response 
-
-<ResponseField name="address" type="String" >Address</ResponseField> 
-<ResponseField name="coin" type="String" >Coin name (Cobo Custody)</ResponseField> 
-<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
-<ResponseField name="description" type="String" >Full name (reference only, subject to change)</ResponseField> 
-<ResponseField name="balance" type="String" >Coin balance</ResponseField> 
-<ResponseField name="decimal" type="Int" >Decimal precision</ResponseField> 
-<ResponseField name="nft_code" type="String" >NFT code</ResponseField> 
-<ResponseField name="token_id" type="String" >NFT token Id</ResponseField> 
-<ResponseField name="contract_address" type="String" >NFT contract address</ResponseField> 
 <RequestExample>
 ```python Python
 request(

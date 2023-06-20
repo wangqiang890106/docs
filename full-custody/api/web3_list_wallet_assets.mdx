@@ -1,21 +1,22 @@
 ---
-title: 
+title: Get Wallet Assets List
 api: GET /v1/custody/web3_list_wallet_assets/ 
-description: Get Wallet Assets List 
+description: "This endpoint returns a JSON response containing a list of assets (coins and NFTs) and their respective information for a given wallet address and chain code. The response includes the coin's name, chain code, display code, description, and balance. For NFTs, the response includes the NFT code, chain code, display code, description, balance, token type, and contract address."
 ---
 #### Request 
 
 <ParamField body="address" type="String" >Address, if it is empty, it will return the assets in all addresses, if it is not empty, it will return the assets in this address</ParamField> 
 <ParamField body="chain_code" type="String" >Chain code, if it is empty, it will return all chain_code assets, if it is not empty, it will return the assets in this chain_code</ParamField> 
 
-#### Response 
-
-<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
-<ResponseField name="coin" type="String" >Coin code</ResponseField> 
+#### Response
+<ResponseField name="chain_code" type="String" >The chain code of the coin.</ResponseField>
+<ResponseField name="coin" type="String" >The asset coin of the coin.</ResponseField>
+<ResponseField name="display_code" type="String" >Coin/NFT ticker symbol (not unique, changeable, for reference only ).</ResponseField>
+<ResponseField name="description" type="String" >Full name of coin/NFT (not unique, changeable, for reference only ).</ResponseField>
 <ResponseField name="amount" type="String" >Coin/NFT amount</ResponseField> 
 <ResponseField name="nft_code" type="String" >NFT Collection Code</ResponseField> 
-<ResponseField name="standard" type="String" >Token standard</ResponseField> 
-<ResponseField name="contract_address" type="String" >NFT Contract Address</ResponseField> 
+<ResponseField name="standard" type="String" >The token type of the NFT.</ResponseField>
+<ResponseField name="contract_address" type="String" >The contract address of the NFT.</ResponseField>
 <RequestExample>
 ```python Python
 request(

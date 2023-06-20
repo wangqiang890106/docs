@@ -1,30 +1,20 @@
 ---
 title: Get Internal Addresses Info
 api: "GET /v1/custody/internal_address_info_batch/"
-description: Check Loop Address Details.
+description: "This endpoint returns information about the given addresses for a specific coin. It takes a GET or POST request with parameters 'coin' and 'address', where 'coin' is the cryptocurrency symbol and 'address' is a comma-separated list of addresses. The response is a list of dictionaries, where each dictionary contains information about the corresponding address, including whether it is an internal address or wallet address."
 ---
 To check if the address available for Loop transaction.
 
 More info about Loop ： [https://loop.top/](https://loop.top/)
 
 #### Request
-<ParamField body="coin" type="String" required>
- Coin code
-</ParamField>
-<ParamField body="address" type="String" required>
-Deposit address(Seperate memo by vertical bar)
-</ParamField>
+<ParamField body="coin" type="String" required>The coin symbol.</ParamField>
+<ParamField body="address" type="String" required>A comma-separated list of addresses.</ParamField>
 
 #### Response
-<ResponseField name="coin" type="String">
- Coin code
-</ResponseField>
-<ResponseField name="address" type="String">
- Deposit address
-</ResponseField>
-<ResponseField name="is_internal_address" type="Bool">
- If it's Loop address
- </ResponseField>
+<ResponseField name="coin" type="String">The coin symbol.</ResponseField>
+<ResponseField name="address" type="String">The address being checked.</ResponseField>
+<ResponseField name="is_internal_address" type="Bool">Whether the address is an internal address.</ResponseField>
 
 <RequestExample>
 ```python Python

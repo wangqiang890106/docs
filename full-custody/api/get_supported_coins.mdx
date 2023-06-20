@@ -1,14 +1,14 @@
 ---
 title: Get Supported Coins
 api: "GET /v1/custody/get_supported_coins/"
-description: Returns a list of supported coins for the Custody API.
+description: This endpoint returns a JSON response with a list of supported coins for the Custody API.
 ---
 
 #### Request
 None
 
 #### Response
-<ResponseField name="coin" type="String">Coin code</ResponseField>
+<ResponseField name="coin" type="String">The coin symbol.</ResponseField>
 <ResponseField name="display_code" type="String">Coin ticker symbol (not unique, changeable, for reference only )</ResponseField>
 <ResponseField name="description" type="Int">Full name of coin (not unique, changeable, for reference only )</ResponseField>
 <ResponseField name="decimal" type="Int">Coin balance decimal places</ResponseField>

@@ -1,19 +1,17 @@
 ---
 title: Get Addresses Info
 api: "GET /v1/custody/addresses_info/"
-description: Returns information about the given addresses for a specific coin.
+description: This endpoint returns information about a list of addresses for a specific coin. The endpoint accepts GET and POST requests with parameters 'coin' and 'address'. The 'coin' parameter specifies the coin type, and the 'address' parameter is a comma-separated list of addresses. The response contains the coin type and a comma-separated list of addresses that belong to the custody wallet of the authenticated user.
 ---
 
 
 #### Request
-<ParamField body="coin" type="String" required>Coin code</ParamField>
-<ParamField body="address" type="String" required>(Address \| Memo) ,Deposit address Separate by comma more than one source address</ParamField>
+<ParamField body="coin" type="String" required>The coin type.</ParamField>
+<ParamField body="address" type="String" required>A comma-separated list of addresses.</ParamField>
 
 #### Response
-<ResponseField name="coin" type="String">Coin code</ResponseField>
-<ResponseField name="address" type="String">
- Only return the addresses that belong to it correctly, multiple addresses are separated by commas (if there is Memo, separated by vertical bars)
-</ResponseField>
+<ResponseField name="coin" type="String">The coin type.</ResponseField>
+<ResponseField name="addresses" type="String">A comma-separated list of addresses that belong to the custody wallet of the authenticated user.</ResponseField>
 
 <RequestExample>
  ```python Python

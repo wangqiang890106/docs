@@ -1,22 +1,22 @@
 ---
-title: 
+title: Submit Web3 Contract
 api: POST /v1/custody/web3_contract/ 
-description: Submit Web3 Contract 
+description: "This endpoint allows users to interact with smart contracts on various blockchain networks. Users can send requests to execute a method on a specific smart contract by providing the necessary parameters such as the contract address, method ID, and arguments. The endpoint also supports specifying the gas limit and amount to be sent with the transaction."
 ---
 #### Request 
 
-<ParamField body="chain_code" type="String" required>Chain code</ParamField> 
-<ParamField body="request_id" type="String" required>Withdrawal request ID (Universally unique ID for each user's withdraw request and less than or equal to 120 characters)</ParamField> 
-<ParamField body="wallet_addr" type="String" required>Web3 wallet address</ParamField> 
-<ParamField body="contract_addr" type="String" required>Contract address</ParamField> 
-<ParamField body="method_id" type="String" required>Contract method id</ParamField> 
-<ParamField body="method_name" type="String" required>Contract method name</ParamField> 
-<ParamField body="args" type="String" required>Contract method args</ParamField> 
+<ParamField body="chain_code" type="String" required>The code of the blockchain network to use.</ParamField> 
+<ParamField body="request_id" type="String" required>A unique identifier for the request.</ParamField> 
+<ParamField body="wallet_addr" type="String" required>The address of the wallet to use for the transaction.</ParamField> 
+<ParamField body="contract_addr" type="String" required>The address of the smart contract to interact with.</ParamField> 
+<ParamField body="method_id" type="String" required>The ID of the method to execute on the smart contract.</ParamField> 
+<ParamField body="method_name" type="String" required>The name of the method to execute on the smart contract.</ParamField> 
+<ParamField body="args" type="String" required>A JSON-encoded list of arguments to pass to the method.</ParamField> 
 <ParamField body="gas_limit" type="Int" >Gas limit</ParamField> 
 
-#### Response 
+#### Response
+<ResponseField name="coin" type="String" >Coin Code</ResponseField>
 
-<ResponseField name="coin" type="String" >Coin Code</ResponseField> 
 <RequestExample>
 ```python Python
 request(

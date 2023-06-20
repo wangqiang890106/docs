@@ -1,15 +1,13 @@
 ---
-title: 
+title: Get Staking Product Details
 api: GET /v1/custody/staking_product/ 
-description: Get a Staking Product Details 
+description: "This endpoint returns information about a staking product with the given product ID. The response is a JSON object containing details about the product, such as its name, description, and rewards. The language parameter can be used to specify the language of the response (default is English)."
 ---
-#### Request 
-
+#### Request
 <ParamField body="product_id" type="String" required>Unique ID for staking product</ParamField> 
 <ParamField body="language" type="String" >Language of product description(zh,en(default))</ParamField> 
 
-#### Response 
-
+#### Response
 <ResponseField name="product_id" type="Int" >Product id(unique)</ResponseField> 
 <ResponseField name="name" type="String" >Product name</ResponseField> 
 <ResponseField name="description" type="String" >Product description</ResponseField> 
@@ -29,7 +27,10 @@ description: Get a Staking Product Details
 <ResponseField name="stop_stake_time" type="Int" >Stop stake time(mileseconds timestamp)</ResponseField> 
 <ResponseField name="start_staking_time" type="Int" >Start staking time(mileseconds timestamp)</ResponseField> 
 <ResponseField name="stop_staking_time" type="Int" >Stop staking time(mileseconds timestamp)</ResponseField> 
-<ResponseField name="liquidate_time" type="Int" >Liquidate time(mileseconds timestamp)</ResponseField> 
+<ResponseField name="liquidate_time" type="Int" >Liquidate time(mileseconds timestamp)</ResponseField>
+<ResponseField name="reward_liquidate_time" type="Int" >Reward liquidate time(mileseconds timestamp)</ResponseField>
+
+
 <RequestExample>
 ```python Python
 request(

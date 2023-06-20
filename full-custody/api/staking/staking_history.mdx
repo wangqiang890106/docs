@@ -1,23 +1,22 @@
 ---
-title: 
+title: Get All Staking History
 api: GET /v1/custody/staking_history/ 
-description: Get All Staking History 
+description: "This endpoint returns a list of staking activities for a given coin, with optional filters for activity type, maximum ID, limit, and product ID. The response includes the activity ID, coin, amount, type, raw type, time, and product information."
 ---
-#### Request 
+#### Request
+<ParamField body="coin" type="String" >The coin to filter by.</ParamField> 
+<ParamField body="type" type="String" >The activity type to filter by.</ParamField> 
+<ParamField body="max_id" type="String" >The maximum activity ID to return.</ParamField> 
+<ParamField body="limit" type="String" >The maximum number of activities to return.</ParamField> 
+<ParamField body="product_id" type="Int" >The product ID to filter by.</ParamField> 
 
-<ParamField body="coin" type="String" >Coin code</ParamField> 
-<ParamField body="type" type="String" >stake, unstake,reward</ParamField> 
-<ParamField body="max_id" type="String" >Max. id</ParamField> 
-<ParamField body="limit" type="String" >Limit of the list, Max.50</ParamField> 
-<ParamField body="product_id" type="Int" >Product ID</ParamField> 
-
-#### Response 
-
+#### Response
 <ResponseField name="id" type="String" >Action ID</ResponseField> 
-<ResponseField name="coin" type="String" >Coin code</ResponseField> 
-<ResponseField name="amount" type="String" >Action amount</ResponseField> 
-<ResponseField name="time" type="Int" >Time(mileseconds timestamp)</ResponseField> 
-<ResponseField name="product" type="Dict" >More in: staking_product</ResponseField> 
+<ResponseField name="coin" type="String" >The coin of the activity.</ResponseField> 
+<ResponseField name="amount" type="String" >The absolute amount of the activity.</ResponseField>
+<ResponseField name="type" type="String" >Action type(stake unstake reward fee).</ResponseField>
+<ResponseField name="time" type="Int" >The time of the activity.</ResponseField> 
+<ResponseField name="product" type="Dict" >The product information of the activity.</ResponseField> 
 <RequestExample>
 ```python Python
 request(

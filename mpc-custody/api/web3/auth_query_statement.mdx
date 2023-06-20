@@ -1,17 +1,17 @@
 ---
-title: 
+title: Query Statement By ID
 api: GET /v1/custody/auth/query_statement/ 
-description: Query auth statement status 
+description: "This endpoint allows authenticated users to query a statement by providing a statement ID. The response is a JSON object containing information about the statement, including its ID, creation time, and a list of transactions. The endpoint requires the user to have query permission."
 ---
-#### Request 
-
+#### Request
 <ParamField body="statement_id" type="String" required>unique auth statement id</ParamField> 
 
-#### Response 
-
-<ResponseField name="id" type="String" >unique auth statement id</ResponseField> 
+#### Response
+<ResponseField name="id" type="String" >unique auth statement id</ResponseField>
+<ResponseField name="status" type="String" >auth statement status (UNSEND: 1, WAIT: 2, APPROVE: 3, REJECT: 4, INVALID: 5, TIMEOUT: 6, SEND_TIMEOUT: 7, APPROVE_BY_OTHERS: 9, REJECT_BY_OTHERS: 10)</ResponseField>
 <ResponseField name="user_id" type="String" >unique user ID</ResponseField> 
-<ResponseField name="pubkey" type="String" >Auth public key</ResponseField> 
+<ResponseField name="pubkey" type="String" >Auth public key</ResponseField>
+
 <RequestExample>
 ```python Python
 request(

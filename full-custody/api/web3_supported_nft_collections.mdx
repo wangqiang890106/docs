@@ -1,18 +1,19 @@
 ---
-title: 
+title: Get Supported NFT Collections
 api: GET /v1/custody/web3_supported_nft_collections/ 
-description: Get Supported NFT Collections 
+description: "This endpoint returns a JSON response containing a list of supported NFT collections on the web3 platform. The response includes the NFT code, chain code, description, display code, standard, and contract address for each collection."
 ---
-#### Request 
+#### Request
+None
 
 
-#### Response 
-
-<ResponseField name="nft_code" type="String" >NFT Collection code</ResponseField> 
-<ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
-<ResponseField name="description" type="String" >Full name of coin (not unique, changeable, for reference only )</ResponseField> 
-<ResponseField name="standard" type="String" >Token Standard</ResponseField> 
-<ResponseField name="contract_address" type="String" >NFT Contract Address</ResponseField> 
+#### Response
+<ResponseField name="nft_code" type="String" >NFT Collection code.</ResponseField>
+<ResponseField name="chain_code" type="String" >Chain code.</ResponseField> 
+<ResponseField name="description" type="String" >Full name of coin (not unique, changeable, for reference only ).</ResponseField>
+<ResponseField name="display_code" type="String" >Coin ticker symbol (not unique, changeable, for reference only )</ResponseField>
+<ResponseField name="standard" type="String" >Token Standard.</ResponseField>
+<ResponseField name="contract_address" type="String" >NFT Contract Address.</ResponseField>
 <RequestExample>
 ```python Python
 request(

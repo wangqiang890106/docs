@@ -1,13 +1,15 @@
 ---
-title: 
+title: Create Binding
 api: POST /v1/custody/auth/create_binding/ 
-description: Create Binding 
+description: "This endpoint creates a binding between a user in the prime broker system and a user in the custody system. It requires a POST request with a 'user_id' field in the request body, and the user must have all necessary permissions. The response is a JSON object with a 'binder_id' field containing the ID of the newly created binding."
 ---
-#### Request 
 
-<ParamField body="user_id" type="String" required>unique user ID, no more than 24 characters</ParamField> 
+#### Request
+<ParamField body="binder_id" type="String" required>CoboAuth binding code</ParamField>
 
-#### Response 
+#### Response
+<ResponseField name="binder_id" type="String" >Binding ID, the binding ID needs to be prefixed with binder_id= to generate a QR code for the user to scan the code to bind, or the user can directly copy the binding code in the form of binder_id=xxxx to Cobo Auth for the binding operation</ResponseField>
+
 
 <RequestExample>
 ```python Python

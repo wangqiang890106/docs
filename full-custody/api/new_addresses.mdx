@@ -1,28 +1,21 @@
 ---
 title: Get New Deposit Addresses
 api: "POST /v1/custody/new_addresses/"
-description: Generates new addresses for a specified coin.
+description: "This endpoint generates new addresses for a given coin and returns them in a JSON response. The number of addresses to generate can be specified in the request body. The endpoint checks if the user has permission to add new addresses and if the requested number of addresses is within the allowed limit. It also checks if the requested coin is supported and generates the addresses using the specified wallet. The response contains the coin and a list of generated addresses."
 ---
-A single request for this interface can generate up to 200 addresses(For BTC address, it supports generating segwit (3
-address) and native_ Segwit (bc1 address), see below for details. (* Cobo supports withdrawal to any BTC address type)
-
 
 <Note>For BTC address, it supports generating segwit (3 address) and native_ Segwit (bc1 address), see below for details. (*
 Cobo supports withdrawal to any BTC address type)</Note>
 
 #### Request
-<ParamField body="coin" type="String" required>Coin code</ParamField>
-<ParamField body="count" type="Int" required>Number of addresses (the number of specified addresses can be transmitted, up to 200)</ParamField>
-<ParamField body="native_segwit" type="Bool">It is only valid for BTC. If it is empty, it will return the Cobo default address format (segwit 3 address). If it is not empty, it will be native_ Segwit (bc1 address)</ParamField>
+<ParamField body="coin" type="String" required>The coin to generate addresses for.</ParamField>
+<ParamField body="count" type="Int" required>The number of addresses to generate.</ParamField>
+<ParamField body="native_segwit" type="Bool">Whether to generate native segwit addresses.</ParamField>
 
 
 #### Response
-<ResponseField name="coin" type="String">
- Coin code
-</ResponseField>
-<ResponseField name="addresses" type="String">
-Deposit address(Seperate Memo by vertical bar)
-</ResponseField>
+<ResponseField name="coin" type="String">The coin for which addresses were generated.</ResponseField>
+<ResponseField name="addresses" type="String">List of generated addresses.</ResponseField>
 
 
 

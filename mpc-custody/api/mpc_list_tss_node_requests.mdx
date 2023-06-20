@@ -1,20 +1,21 @@
 ---
-title: 
+title: Get Tss Node Requests List
 api: GET /v1/custody/mpc/list_tss_node_requests/ 
-description: Get List Tss Node Requests List 
+description: "This endpoint returns a JSON response containing a list of TSS (Threshold Signature Scheme) requests with their metadata. The requests can be filtered by request type and status. The metadata includes the COBO ID, request type, status, failed reason (if any), and additional information specific to the request type (e.g., threshold and node IDs for key generation requests)."
 ---
-#### Request 
-
+#### Request
 <ParamField body="request_type" type="Int" >Request type(KEYGEN type: 1, KEYRESHARE type: 2)</ParamField> 
 <ParamField body="status" type="int" >Request status</ParamField> 
 
-#### Response 
-
+#### Response
 <ResponseField name="cobo_id" type="String" >Unique request ID</ResponseField> 
 <ResponseField name="request_type" type="Int" >Request type(KEYGEN type: 1, KEYRESHARE type: 2)</ResponseField> 
 <ResponseField name="status" type="Int" >Request status（NEW: 100, WAITING_APPROVAL: 200, PENDING: 300, SUCCESS: 400, FAILED: 500）</ResponseField> 
 <ResponseField name="failed_reason" type="String" >Reason for failure</ResponseField> 
-<ResponseField name="threshold" type="String" >Signature Threshold</ResponseField> 
+<ResponseField name="threshold" type="String" >Signature Threshold</ResponseField>
+<ResponseField name="node_ids" type="String" >Request data associated with key generation (i.e. KeyGen) and soft key recovery (i.e. KeyShare)</ResponseField>
+
+
 <RequestExample>
 ```python Python
 request(

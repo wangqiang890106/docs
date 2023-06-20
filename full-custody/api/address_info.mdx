@@ -1,26 +1,18 @@
 ---
 title: Get Address Info
 api: "GET /v1/custody/address_info/"
-description: Returns information about a given address for a specified coin.
+description: This endpoint returns information about a given address for a specific coin. It checks if the address belongs to the custody wallet and raises an exception if it doesn't. The response is a JSON object containing the coin and address fields.
 ---
 
 
 #### Request
 
-<ParamField body="coin" type="String" required>
- Coin code
-</ParamField>
-<ParamField body="address" type="String" required>
-Deposit address(Address|Memo)
-</ParamField>
+<ParamField body="coin" type="String" required>The coin symbol.</ParamField>
+<ParamField body="address" type="String" required>The address to retrieve information for.</ParamField>
 
 #### Response
-<ResponseField name="coin" type="String" required>
- Coin code
-</ResponseField>
-<ResponseField name="address" type="String" required>
-Deposit address(Seperate memo by vertical bar)
-</ResponseField>
+<ResponseField name="coin" type="String" required>The coin symbol.</ResponseField>
+<ResponseField name="address" type="String" required>The address to retrieve information for.</ResponseField>
 
 <RequestExample>
 ```python Python

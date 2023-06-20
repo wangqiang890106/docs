@@ -1,18 +1,18 @@
 ---
-title: 
+title: Get Supported Contract Methods
 api: GET /v1/custody/web3_supported_contract_methods/ 
-description: Get Supported Contract Methods 
+description: "This endpoint returns a JSON response with a list of supported contract methods for a given chain and contract address."
 ---
-#### Request 
+#### Request
+<ParamField body="chain_code" type="String" required>Chain code of the blockchain.</ParamField>
+<ParamField body="contract_address" type="String" required>Address of the contract.</ParamField>
 
-<ParamField body="chain_code" type="String" required>Chain code</ParamField> 
-<ParamField body="contract_address" type="String" required>Contract address</ParamField> 
-
-#### Response 
-
+#### Response
 <ResponseField name="type" type="String" >Contract Method Type</ResponseField> 
 <ResponseField name="method_name" type="String" >Contract Method Name</ResponseField> 
-<ResponseField name="method_id" type="String" >Contract Method ID</ResponseField> 
+<ResponseField name="method_id" type="String" >Contract Method ID</ResponseField>
+<ResponseField name="inputs" type="String" >Contract Method Input Parameters</ResponseField>
+
 <RequestExample>
 ```python Python
 request(

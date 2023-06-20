@@ -1,5 +1,5 @@
 ---
-title: 
+title: Sign Message
 api: POST /v1/custody/mpc/sign_message/ 
 description: Sign Message 
 ---
@@ -12,7 +12,6 @@ description: Sign Message
 <ParamField body="extra_parameters" type="Json" required>extra_parameters should include field message in EIP-191 signature, which is Base64 encode of the original message, and should contain filed structured_data in EIP-712 signature, which is Json of EIP-712 structured data</ParamField> 
 
 #### Response
-
 <ResponseField name="cobo_id" type="String" >Unique transaction ID</ResponseField>
 
 

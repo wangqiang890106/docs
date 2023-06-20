@@ -1,25 +1,24 @@
 ---
-title: 
+title: Get Wallet Transactions List
 api: GET /v1/custody/web3_list_wallet_transactions/ 
-description: Obtain the list of transactions through Address query(deposit&withdraw) 
+description: "This endpoint returns a list of web3 transactions for a given wallet address. The response contains transaction details such as transaction hash, block number, and transaction value."
 ---
-#### Request 
+#### Request
+<ParamField body="address" type="String" required>Wallet address to retrieve transactions for.</ParamField> 
+<ParamField body="max_id" type="Int" >Maximum transaction ID to retrieve.</ParamField> 
+<ParamField body="min_id" type="Int" >Minimum transaction ID to retrieve.</ParamField> 
+<ParamField body="limit" type="Int" >Maximum number of transactions to retrieve.</ParamField> 
+<ParamField body="chain_code" type="String" >Chain code of the wallet.</ParamField> 
 
-<ParamField body="address" type="String" required>Address is optional.</ParamField> 
-<ParamField body="max_id" type="Int" >The transaction history ID limit is optional. If not included, will by default return the most recent records.(cannot be used with min_id)</ParamField> 
-<ParamField body="min_id" type="Int" >Optional. If included, the sequence will be changed to time ASC. If not included, will by default return the most recent records, time DESC.(cannot be used with max_id)</ParamField> 
-<ParamField body="limit" type="Int" >Page size is optional. If not included, the default size will be 50, and the maximum size will also be 50.</ParamField> 
-<ParamField body="chain_code" type="String" >Chain Code</ParamField> 
-
-#### Response 
-
+#### Response
 <ResponseField name="id" type="String" >Cobo Unique Transaction ID</ResponseField> 
 <ResponseField name="txid" type="String" >Transaction Hash</ResponseField> 
 <ResponseField name="create_time" type="Int" >Transaction creation time</ResponseField> 
 <ResponseField name="status" type="Int" >Transaction status(pending approval: 101, pending: 100, success: 200, reject: 300, fail: 400)</ResponseField> 
 <ResponseField name="chain_code" type="String" >Chain code</ResponseField> 
 <ResponseField name="coin" type="String" >Coin code</ResponseField> 
-<ResponseField name="name" type="String" >Token name</ResponseField> 
+<ResponseField name="name" type="String" >Token name</ResponseField>
+<ResponseField name="amount" type="String" >Transaction value (Note that the value here contains decimals. For example, a BTC value of 100,000,000 here is actually 1 BTC)</ResponseField>
 <ResponseField name="display_code" type="String" >Coin ticker symbol (not unique, changeable, for reference only )</ResponseField> 
 <ResponseField name="description" type="String" >Full name of coin (not unique, changeable, for reference only )</ResponseField> 
 <ResponseField name="decimal" type="String" >Coin balance decimal places</ResponseField> 
@@ -28,7 +27,8 @@ description: Obtain the list of transactions through Address query(deposit&withd
 <ResponseField name="confirming_threshold" type="String" >Confirmation threshold required for the coin</ResponseField> 
 <ResponseField name="gas_price" type="String" >Transaction gas price</ResponseField> 
 <ResponseField name="gas_limit" type="String" >Transaction gas limit</ResponseField> 
-<ResponseField name="fee_used" type="String" >Transaction gas fee value</ResponseField> 
+<ResponseField name="fee_used" type="String" >Transaction gas fee value</ResponseField>
+
 <RequestExample>
 ```python Python
 request(

@@ -1,14 +1,14 @@
 ---
 title: "Get Account Details"
 api: "GET /v1/custody/org_info/"
-description: Returns detailed information about the organization associated with the authenticated user's custody wallet.
+description: "This endpoint returns a JSON response with detailed information about the organization associated with the authenticated user's custody wallet."
 ---
 
 #### Request
 None
 
 #### Response
-<ResponseField name="coin" type="String">Coin code</ResponseField>
+<ResponseField name="coin" type="String">The coin symbol.</ResponseField>
 <ResponseField name="display_code" type="String">Coin ticker symbol (not unique, changeable, for reference only )</ResponseField>
 <ResponseField name="description" type="String">Full name of coin (not unique, changeable, for reference only )</ResponseField>
 <ResponseField name="decimal" type="String">Coin balance decimal places</ResponseField>
@@ -18,6 +18,7 @@ None
 <ResponseField name="abs_balance" type="String">Absolute value of balance</ResponseField>
 <ResponseField name="fee_coin" type="String">Coin used for fee</ResponseField>
 <ResponseField name="abs_estimate_fee" type="String">Estimated fee</ResponseField>
+<ResponseField name="abs_estimate_fee_usd" type="String">Estimated fee usd</ResponseField>
 <ResponseField name="confirming_threshold" type="Int">Confirmation threshold required for the coin</ResponseField>
 <ResponseField name="dust_threshold" type="Int">Coin minimum withdrawal threshold</ResponseField>
 <ResponseField name="minimum_deposit_threshold" type="String">Coin minimum withdrawal threshold</ResponseField>

@@ -1,14 +1,16 @@
 ---
-title: 
+title: Unstake
 api: POST /v1/custody/staking_unstake/ 
-description: Unstake 
+description: "This endpoint allows users to stake or unstake a certain amount of a specified product in their custody wallet. The product_id and amount parameters are required in the POST request body. The endpoint first checks if the specified product exists, and then calls the pos_unstake method of the CustodyPosService to perform the staking or unstaking operation."
 ---
 #### Request 
 
-<ParamField body="product_id" type="Int" required>Product ID</ParamField> 
-<ParamField body="amount" type="Int" required>Unstake amount</ParamField> 
+<ParamField body="product_id" type="Int" required>The ID of the product to unstake.</ParamField>
+<ParamField body="amount" type="Int" required>The amount of the product to unstake.</ParamField>
 
-#### Response 
+#### Response
+<ResponseField name="result" type="Bool" >Success is true,Failed is False.</ResponseField>
+
 
 <RequestExample>
 ```python Python

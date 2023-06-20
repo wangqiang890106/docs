@@ -1,12 +1,15 @@
 ---
-title: 
+title: Get Supported Chains
 api: GET /v1/custody/web3_supported_chains/ 
-description: Get Supported Chains 
+description: "This endpoint returns a JSON response with a list of supported blockchain network codes for the Web3CustodyWalletManager. The response is filtered based on the organization ID of the authenticated user."
 ---
-#### Request 
 
+#### Request
+None
 
-#### Response 
+#### Response
+<ResponseField name="chain_codes" type="String" >Chain code(The result applies to the chain_code content in the other web3 api request parameters).</ResponseField>
+
 
 <RequestExample>
 ```python Python

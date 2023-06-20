@@ -1,23 +1,21 @@
 ---
-title: 
+title: Get Transactions List
 api: POST /v1/custody/mpc/list_transactions/ 
-description: Get Transactions List 
+description: "This endpoint returns a list of transactions filtered by various parameters such as start and end time, transaction status, transaction type, coins, and addresses. The response is a JSON object containing a list of transactions."
 ---
-#### Request 
-
+#### Request
 <ParamField body="start_time" type="Int" >≥ start time (unit: milliseconds); details of transactions whose creation times are equal to or later than this timestamp will be returned</ParamField> 
 <ParamField body="end_time" type="Int" >＜ end time (unit: milliseconds); details of transactions whose creation times are earlier than this timestamp will be returned</ParamField> 
 <ParamField body="status" type="Int" >transaction status; please refer to TransactionsStatusEnum for more information</ParamField> 
 <ParamField body="order_by" type="String" >sorting method; default: created_time; other option: modified_time</ParamField> 
 <ParamField body="order" type="String" >sorting order; options: ASC (default), DESC</ParamField> 
-<ParamField body="transaction_type" type="Int" >transaction type（TYPE_MPC_WEB3_WEB: 300, TYPE_MPC_WEB3_MMI_TX：301， TYPE_MPC_WEB3_API_TRANSACTION: 303, TYPE_MPC_WEB3_TRANSACTION_FROM_EXTERNAL: 307, TYPE_MPC_WEB3_RBF_API_SPEEDUP: 308, TYPE_MPC_WEB3_RBF_WEB_SPEEDUP: 309, TYPE_MPC_WEB3_RBF_API_DROP: 310, TYPE_MPC_WEB3_RBF_WEB_DROP: 311, TRANSACTION_FROM_DEPOSIT：1000）</ParamField> 
+<ParamField body="transaction_type" type="Int" >Transaction type（TRANSACTION_FROM_WEB：100, TRANSACTION_FROM_API：102, TRANSACTION_RBF_API_SPEEDUP：103, TRANSACTION_RBF_WEB_SPEEDUP：104, TRANSACTION_RBF_API_DROP：105, TRANSACTION_RBF_WEB_DROP：106, TRANSACTION_FROM_DEPOSIT：1000）</ParamField>
 <ParamField body="coins" type="String" >coin names; separated by commas</ParamField> 
 <ParamField body="from_address" type="String" >from address</ParamField> 
 <ParamField body="to_address" type="String" >to address</ParamField> 
 <ParamField body="limit" type="Int" >entries per page; max: 50; default: 50</ParamField> 
 
-#### Response 
-
+#### Response
 <ResponseField name="total" type="Int" >Total number of transactions that meets the requirements</ResponseField> 
 <ResponseField name="cobo_id" type="String" >Unique transaction ID</ResponseField> 
 <ResponseField name="request_id" type="String" >Transaction request ID; it can be left empty if the transaction is a deposit</ResponseField> 
@@ -33,7 +31,8 @@ description: Get Transactions List
 <ResponseField name="abs_amount" type="String" >Absolute value of the transaction amount (for instance, 1.5 will be displayed for a transaction amount of 1.5 BTC)</ResponseField> 
 <ResponseField name="gas_price" type="Int" >Gas Price</ResponseField> 
 <ResponseField name="gas_limit" type="Int" >Gas limit</ResponseField> 
-<ResponseField name="fee_used" type="Int" >Gas fees (e.g. one bitcoin is divisible to eight decimal places, and 100000000 represents 1 BTC)</ResponseField> 
+<ResponseField name="fee_used" type="Int" >Gas fees (e.g. one bitcoin is divisible to eight decimal places, and 100000000 represents 1 BTC)</ResponseField>
+<ResponseField name="fee" type="Float" >The fee of fee_amount value set when creating transaction for UTXO model</ResponseField>
 <ResponseField name="source_addresses" type="List" >List of ‘from addresses’</ResponseField> 
 <ResponseField name="from_address" type="String" >From address</ResponseField> 
 <ResponseField name="to_address" type="String" >To address</ResponseField> 
@@ -41,7 +40,8 @@ description: Get Transactions List
 <ResponseField name="vout_n" type="Int" >UTXO transaction index</ResponseField> 
 <ResponseField name="nonce" type="Int" >nonce value of a transaction on Ethereum</ResponseField> 
 <ResponseField name="confirmed_number" type="Int" >Number of block confirmations</ResponseField> 
-<ResponseField name="replace_cobo_id" type="String" >transaction ID of a transaction replaced via RBF</ResponseField> 
+<ResponseField name="replace_cobo_id" type="String" >transaction ID of a transaction replaced via RBF</ResponseField>
+<ResponseField name="transaction_type" type="Int" >Transaction type（TRANSACTION_FROM_WEB：100, TRANSACTION_FROM_API：102, TRANSACTION_RBF_API_SPEEDUP：103, TRANSACTION_RBF_WEB_SPEEDUP：104, TRANSACTION_RBF_API_DROP：105, TRANSACTION_RBF_WEB_DROP：106, TRANSACTION_FROM_DEPOSIT：1000）</ResponseField>
 <ResponseField name="operation" type="Int" >action type; it will be empty if the action is making a deposit (TRANSFER: 100, CONTRACT_CALL: 200)</ResponseField> 
 <ResponseField name="block_hash" type="String" >Block hash</ResponseField> 
 <ResponseField name="block_height" type="Int" >Block height</ResponseField> 
@@ -49,7 +49,8 @@ description: Get Transactions List
 <ResponseField name="extra_parameters" type="Json" >Transaction remarks</ResponseField> 
 <ResponseField name="created_time" type="Int" >Creation time of the transaction</ResponseField> 
 <ResponseField name="updated_time" type="Int" >Last time the transaction is updated</ResponseField> 
-<ResponseField name="failed_reason" type="String" >Reasons for rejection</ResponseField> 
+<ResponseField name="failed_reason" type="String" >Reasons for rejection</ResponseField>
+
 <RequestExample>
 ```python Python
 request(
