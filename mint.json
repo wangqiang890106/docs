@@ -24,22 +24,22 @@
   "anchors": [
     {
       "name": "Full Custody",
-      "icon": "puzzle",
+      "icon": "warehouse",
       "url": "full-custody"
     },
     {
       "name": "MPC Custody",
-      "icon": "puzzle",
+      "icon": "people-group",
       "url": "mpc-custody"
     },
     {
       "name": "Smart Contract Custody",
-      "icon": "puzzle",
+      "icon": "file-contract",
       "url": "smart-contract-custody"
     },
     {
       "name": "News",
-      "icon": "blogger",
+      "icon": "newspaper",
       "url": "https://news.cobo.com/home/en/"
     },
     {
@@ -194,17 +194,12 @@
     {
       "group": "Overview",
       "pages": [
-        "mpc-custody/introduction"
+        "mpc-custody/mpc-introduction",
+        "mpc-custody/technology-introduction"
       ]
     },
     {
-      "group": "Get Started",
-      "pages": [
-        "mpc-custody/get-started"
-      ]
-    },
-    {
-      "group": "APIs",
+      "group": "WaaS APIs",
       "pages": [
         "mpc-custody/api/overview",
         {
@@ -317,21 +312,19 @@
       ]
     },
     {
-      "group": "SDKs",
+      "group": "TSS Node Callback",
       "pages": [
-        "mpc-custody/sdk/overview"
+        "mpc-custody/callback/tss-node-callback-mechanism",
+        "mpc-custody/callback/callback-server-requirements",
+        "mpc-custody/callback/callback-server-examples",
+        "mpc-custody/callback/callback-server-configuration",
+        "mpc-custody/callback/tss-node-configuration-and-callback-server-startup"
       ]
     },
     {
       "group": "Tools",
       "pages": [
         "mpc-custody/tools/recovery-kit"
-      ]
-    },
-    {
-      "group": "Use Cases",
-      "pages": [
-        "mpc-custody/use-cases/overview"
       ]
     },
     {
