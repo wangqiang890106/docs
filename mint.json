@@ -64,13 +64,14 @@
     {
       "group": "Get Started",
       "pages": [
-        "full-custody/start-waas"
+        "full-custody/start-waas",
+        "full-custody/authentication",
+        "full-custody/test"
       ]
     },
     {
       "group": "APIs",
       "pages": [
-        "full-custody/authentication",
         {
           "group": "Account",
           "pages": [
@@ -165,8 +166,7 @@
             "full-custody/waas-reference/callback-signature",
             "full-custody/waas-reference/faq"
           ]
-        },
-        "full-custody/test"
+        }
       ]
     },
     {
@@ -180,28 +180,22 @@
       ]
     },
     {
-      "group": "Tools",
-      "pages": [
-        "full-custody/tools/overview"
-      ]
-    },
-    {
-      "group": "Use Cases",
-      "pages": [
-        "full-custody/use-cases/overview"
-      ]
-    },
-    {
       "group": "Overview",
       "pages": [
-        "mpc-custody/mpc-introduction",
-        "mpc-custody/technology-introduction"
+        "mpc-custody/mpc-introduction"
       ]
     },
     {
-      "group": "WaaS APIs",
+      "group": "Get Started",
       "pages": [
-        "mpc-custody/api/overview",
+        "mpc-custody/start-waas",
+        "mpc-custody/authentication",
+        "mpc-custody/test"
+      ]
+    },
+    {
+      "group": "APIs",
+      "pages": [
         {
           "group": "Account",
           "pages": [
@@ -308,6 +302,16 @@
               ]
             }
           ]
+        },
+        {
+          "group": "Appendix",
+          "pages": [
+            "mpc-custody/waas-reference/error-codes",
+            "mpc-custody/waas-reference/transaction-notification",
+            "mpc-custody/waas-reference/withdrawal-confirmation",
+            "mpc-custody/waas-reference/callback-signature",
+            "mpc-custody/waas-reference/faq"
+          ]
         }
       ]
     },
@@ -394,7 +398,11 @@
     "raiseIssue": true
   },
   "api": {
-    "baseUrl": ["https://api.cobo.com","https://api.sandbox.cobo.com","https://api.develop.cobo.com"],
+    "baseUrl": [
+      "https://api.cobo.com",
+      "https://api.sandbox.cobo.com",
+      "https://api.develop.cobo.com"
+    ],
     "auth": {
       "method": "basic",
       "name": "Biz-Api-Key:BIZ-API-SIGNATURE:BIZ-API-NONCE"

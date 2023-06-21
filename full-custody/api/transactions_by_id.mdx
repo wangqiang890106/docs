@@ -3,8 +3,8 @@ title: Get Transactions By ID
 api: "GET /v1/custody/transactions_by_id/"
 description: "This endpoint returns a list of transactions filtered by various parameters such as coin, address, side, and transaction ID range. The response includes transaction details such as transaction ID, coin type, amount, and timestamp."
 ---
-Only successful deposit/withdraw requests will be considered as 'Transaction' here
 
+<Note>Only successful deposit/withdraw requests will be considered as 'Transaction' here</Note>
 
 #### Request
 <ParamField body="coin" type="String" >Coin code (Does not return all currencies)</ParamField>
