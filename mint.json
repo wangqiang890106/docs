@@ -319,8 +319,16 @@
       "group": "TSS Node Callback",
       "pages": [
         "mpc-custody/callback/tss-node-callback-mechanism",
-        "mpc-custody/callback/callback-server-requirements",
-        "mpc-custody/callback/callback-server-examples",
+        {
+          "group": "Callback Server Requirements",
+          "pages": [
+            "mpc-custody/callback/callback-server-requirements/callback-api",
+            "mpc-custody/callback/callback-server-requirements/keygen-request",
+            "mpc-custody/callback/callback-server-requirements/sign-request",
+            "mpc-custody/callback/callback-server-requirements/reshare-request",
+            "mpc-custody/callback/callback-server-requirements/callback-server-examples"
+          ]
+        },
         "mpc-custody/callback/callback-server-configuration",
         "mpc-custody/callback/tss-node-configuration-and-callback-server-startup"
       ]
