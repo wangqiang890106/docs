@@ -36,7 +36,7 @@ description: "This endpoint returns information about a withdrawal transaction g
 
 
 <RequestExample>
-```python
+```python Python
 request(
     "GET",
     "/v1/custody/withdraw_info_by_request_id/",
@@ -46,7 +46,7 @@ request(
     api_key, api_secret, host
 )
 ```
-```javascript
+```javascript JavaScript
 coboFetch('GET', '/v1/custody/withdraw_info_by_request_id/',
         {
             "request_id": "unique_123456"
@@ -60,7 +60,7 @@ coboFetch('GET', '/v1/custody/withdraw_info_by_request_id/',
         console.log(err)
     });
 ```
-```go
+```go Go
 Request("GET", "/v1/custody/withdraw_info_by_request_id/", map[string]string{
     "request_id": "unique_123456",
 })

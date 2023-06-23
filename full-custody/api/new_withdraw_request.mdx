@@ -17,7 +17,7 @@ description: "This endpoint allows users to create a new withdrawal request for 
 None
 
 <RequestExample>
-```python
+```python Python
 request(
     "POST",
     "/v1/custody/new_withdraw_request/",
@@ -31,7 +31,7 @@ request(
     api_key, api_secret, host
 )
 ```
-```javascript
+```javascript JavaScript
 coboFetch('POST', '/v1/custody/new_withdraw_request/',
         {
             "coin": "ETH",
@@ -49,7 +49,7 @@ coboFetch('POST', '/v1/custody/new_withdraw_request/',
         console.log(err)
     });
 ```
-```go
+```go Go
 Request("POST", "/v1/custody/new_withdraw_request/", map[string]string{
     "coin": "ETH",
     "address": "0x8e2782aabdf80fbb69399ce3d9bd5ae69a60462c",
