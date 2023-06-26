@@ -3,7 +3,8 @@
   "name": "Developer Hub",
   "logo": {
     "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
+    "light": "/logo/light.png",
+    "href": "https://www.cobo.com"
   },
   "favicon": "/logo/cobo.png",
   "colors": {
