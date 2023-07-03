@@ -1,0 +1,65 @@
+---
+title: "Send Transactions"
+icon: 
+description: 
+---
+
+`Delegate` can call either `execTransaction()` or `execTransactions()` to send transactions.
+
+The following uses `execTransaction()` as an example, where the `CallData` struct is passed in as a parameter.
+
+```
+struct CallData {
+    uint256 flag; // 0x1 delegate call, 0x0 call.
+    address to;
+    uint256 value;
+    bytes data; // calldata
+    bytes hint;
+    bytes extra; // for future support: signatures etc.
+}
+```
+
+Each field in the struct is defined as follows: 
+
+* **flag:** The call type. `0` indicates `call` and `1` indicates `delegatecall`. Note that the access controls associated with each type of call differs.
+* **to**: The smart contract to be called. 
+* **value**: The transaction amount, denominated in ETH, when the contract is called.
+* **data**: The `calldata` of the transaction. It is the `abi.encoded` parameters of the call.
+* **hint**: When the `hint` field is set, the Authorizer will execute a fast path when verifying DeFi permissions, thus reducing gas fee consumption. 
+
+You can call `eth_call` without inputting the `hint` field. The `hint` field will then be returned in `TransactionResult` of the `execTransaction()` function.
+
+The aforementioned process can be achieved using Cobo Safe SDKs. The following uses Cobo Safe SDKs in Javascript as an example.
+
+```js
+const {CoboSafeAccount} = require("./coboaccount.js");
+const {ethers} = require("ethers");
+const ERC20_ABI = require("./abi/ERC20.json");
+
+require("dotenv").config();
+const PRI_KEY = process.env.PRIV;
+const COBO_SAFE_ADDRESS = process.env.COBOSAFE
+
+const provider = new ethers.JsonRpcProvider("https://rpc.ankr.com/polygon")
+const signer = new ethers.Wallet(PRI_KEY, provider);
+const coboSafe = new CoboSafeAccount(COBO_SAFE_ADDRESS, signer)
+const delegate = coboSafe.delegate;
+
+const WMATIC_ADDRESS = "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270";
+
+async function main(){
+    const token = new ethers.Contract(WMATIC_ADDRESS, ERC20_ABI, coboSafe);
+
+    console.log(await token.balanceOf(await coboSafe.safe()))
+    let tx = await token.transfer(delegate, 1);
+    await tx.wait()
+    console.log(await token.balanceOf(await coboSafe.safe()))
+}
+
+main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});
+```
+
+`Cobo Safe` offers SDKs in Python and Javascript. For more information, please refer to [https://github.com/coboglobal/](https://github.com/coboglobal/).

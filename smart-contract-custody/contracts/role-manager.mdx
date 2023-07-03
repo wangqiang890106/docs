@@ -1,0 +1,24 @@
+---
+title: "Role Manager"
+icon: 
+description: 
+---
+
+`Cobo Safe` is embedded with [Role-Based Access Controls](https://en.wikipedia.org/wiki/Role-based\_access\_control).
+
+The admins of an organization can delegate certain DeFi permissions to a specific `Role`. Team members who are `Delegates` will not be granted DeFi permissions directly. Instead, they must be assigned a `Role` by the admins first.
+
+`Role Manager` is a module in `Cobo Safe`. It is used to manage each `Delegate` and its `Role`.
+
+`Role Manager` needs to implement the following interfaces:
+
+```
+interface IRoleManager {
+    function getRoles(address delegate) external view returns (bytes32[] memory);
+
+    function hasRole(address delegate, bytes32 role) external view returns (bool);
+}
+```
+
+* `getRoles()` is used to query the type(s) of `Role` assigned to a `Delegate.` Each `Delegate` can be associated with one or multiple `Roles.`
+* `hasRole()` is used to query whether a specific `Role` has been assigned to a `Delegate`.

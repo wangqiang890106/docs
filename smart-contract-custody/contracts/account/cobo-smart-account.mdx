@@ -1,0 +1,36 @@
+---
+title: "Cobo Smart Account"
+icon: 
+description: 
+---
+
+
+`Cobo Smart Account` is a smart contract wallet, where digital assets are stored in the underlying  smart contract of the `Cobo Smart Account`.
+
+The `Account Address` will be the address of the underlying smart contract.
+
+`Cobo Smart Account` sends transactions using  `call` and  `delegatecall` as follows
+
+```
+contract CoboSmartAccount is BaseAccount {
+    /// @dev Perform a call directly from the contract itself.
+    function _executeTransaction(
+        TransactionData memory transaction
+    ) internal override returns (TransactionResult memory result) {
+        address to = transaction.to;
+        uint256 value = transaction.value;
+        bytes memory data = transaction.data;
+        if (transaction.flag.isDelegateCall()) {
+            // Ignore value here as we are doing delegatecall.
+            (result.success, result.data) = address(to).delegatecall(data);
+        } else {
+            (result.success, result.data) = address(to).call{value: value}(data);
+        }
+    }
+
+    /// @dev The contract itself.
+    function _getAccountAddress() internal view override returns (address account) {
+        return (address(this));
+    }
+}
+```

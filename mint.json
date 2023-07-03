@@ -357,15 +357,23 @@
       "group": "Contracts",
       "pages": [
         "smart-contract-custody/contracts/overview",
-        "smart-contract-custody/contracts/account",
-        "smart-contract-custody/contracts/role",
+        {
+          "group": "Cobo Account",
+          "pages": [
+            "smart-contract-custody/contracts/account/overview",
+            "smart-contract-custody/contracts/account/cobo-safe-account",
+            "smart-contract-custody/contracts/account/cobo-smart-account",
+            "smart-contract-custody/contracts/account/send-transactions"
+          ]
+        },
+        "smart-contract-custody/contracts/role-manager",
         {
           "group": "Authorizer",
           "pages": [
             "smart-contract-custody/contracts/authorizer/overview",
-            "smart-contract-custody/contracts/authorizer/acl",
-            "smart-contract-custody/contracts/authorizer/others",
-            "smart-contract-custody/contracts/authorizer/hint"
+            "smart-contract-custody/contracts/authorizer/baseauthorizer",
+            "smart-contract-custody/contracts/authorizer/baseacl",
+            "smart-contract-custody/contracts/authorizer/others"
           ]
         },
         "smart-contract-custody/contracts/argus",
@@ -399,7 +407,7 @@
   ],
   "footerSocials": {
     "twitter": "https://twitter.com/Cobo_Global",
-    "github": "https://github.com/CoboCustody/",
+    "github": "https://github.com/CoboGlobal/",
     "linkedin": "https://www.linkedin.com/company/cobo-global/"
   },
   "feedback": {
