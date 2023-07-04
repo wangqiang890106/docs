@@ -348,12 +348,6 @@
       ]
     },
     {
-      "group": "Get Started",
-      "pages": [
-        "smart-contract-custody/get-started"
-      ]
-    },
-    {
       "group": "Contracts",
       "pages": [
         "smart-contract-custody/contracts/overview",
@@ -418,7 +412,7 @@
     "baseUrl": [
       "https://api.cobo.com",
       "https://api.sandbox.cobo.com",
-      "https://api.develop.cobo.com"
+      "https://custody.develop.cobo.com"
     ],
     "auth": {
       "method": "basic",
