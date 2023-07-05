@@ -412,7 +412,7 @@
     "baseUrl": [
       "https://api.cobo.com",
       "https://api.sandbox.cobo.com",
-      "https://custody.develop.cobo.com"
+      "https://api.develop.cobo.com"
     ],
     "auth": {
       "method": "basic",

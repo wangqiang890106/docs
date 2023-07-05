@@ -1,7 +1,7 @@
 ---
 title: "Cobo Safe Account"
-icon: 
-description: 
+icon:
+description:
 ---
 
 `Cobo Safe Account` (i.e., `Cobo Safe Module)` uses [Safe](https://safe.global/) (previously `Gnosis Safe)`as the underlying smart contract wallet. `Cobo Safe Account` is the default account type on `Cobo Argus.`
@@ -12,9 +12,9 @@ description:
 
 The `Account Address` of `Cobo Safe Account` is the underlying contract address of `Safe`.
 
-`Cobo Safe Account` sends transactions as follows: 
+`Cobo Safe Account` sends transactions as follows:
 
-```
+```solidity
 contract CoboSafeAccount is BaseAccount {
 
     /// @dev Execute the transaction from the Safe.
