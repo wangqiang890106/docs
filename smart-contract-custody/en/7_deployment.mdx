@@ -1,22 +1,22 @@
 ---
-title: "Deployed contracts"
+title: "Deployed Addresses"
 icon: 
 description: 
 ---
-Most contract in Cobo Safe framework are supposed to be deployed as non-upgradabable [Minimal Proxy Contract](https://eips.ethereum.org/EIPS/eip-1167)
-and theirs implementations are maintained by the `Cobo Factory` contract.
 
-The factory contract is deployed across 6 chains and share the same Cobo Factory contract address.
+
+The majority of smart contracts in the `Cobo Safe` framework are deployed as non-upgradable [`Minimal Proxy Contracts`](https://eips.ethereum.org/EIPS/eip-1167).
+
+The `Cobo Factory` contract, which has been deployed across six blockchains, is used to implement `Cobo Safe` smart contracts:
 
 ```
 0xC0B00000e19D71fA50a9BB1fcaC2eC92fac9549C
 ```
 
-Everyone can examine the latest implementations registered in the factory with the `factory` command of the [pycobosafe](https://github.com/coboglobal/pycobosafe) tool.
+You can examine the latest implementation registered in `Cobo Factory` with the `factory` command of the [`pycobosafe`](https://github.com/coboglobal/pycobosafe) tool. As of July 3, 2023, the following `Cobo Safe` smart contracts have been successfully deployed.
 
-Here is a snapshot of all addresses on July 3, 2023.
+**Ethereum Mainnet**:
 
-Ethereum mainnet:
 ```
   ArgusAccountHelper: 0xB4d7111432C2827B58331802E1759e9c91e83282
   ArgusViewHelper: 0xF97BB9AF9FE6A68b324EdBcd0fE698E631F5113A
@@ -38,7 +38,8 @@ Ethereum mainnet:
   LybraWithdrawAuthorizer: 0x03b6F925841B031356F83EDCe5263e1Fd15e4b99
 ```
 
-Optimism:
+**Optimism**:
+
 ```
   ArgusAccountHelper: 0x10eD590973dbd028556528AEbA962240C47F1963
   ArgusViewHelper: 0x41e5C89Bb2207AaF9ae07441f64b0b822aB8a6ac
@@ -55,7 +56,8 @@ Optimism:
   StargateWithdrawAuthorizer: 0x58bF21e7a425c92C4Af55928FfA9b28a38f7d2cc
 ```
 
-Binance Smart Chain:
+**BNB Smart Chain**:
+
 ```
   TransferAuthorizer: 0x1dB643a720856b1406499e7046414D317A5a6d4b
   ArgusRootAuthorizer: 0x2CdDc6897BaC48Aa25AA4bF640D1dfB7495c83CA
@@ -72,7 +74,8 @@ Binance Smart Chain:
   ArgusViewHelper: 0x2f5F6B42678704B5A738456D1320327cea95ae09
 ```
 
-Polygon:
+**Polygon**:
+
 ```
   ArgusAccountHelper: 0x725A581c9fC882f0C66c112B1CFf2AeAF502AA36
   ArgusViewHelper: 0x20D0b245f72018c0EC105eCEDd11400124b518DB
@@ -89,7 +92,8 @@ Polygon:
   StargateWithdrawAuthorizer: 0x376819712D23F3a3775C416a1Ad5E7a8a05487d4
 ```
 
-Arbitrum:
+**Arbitrum**:
+
 ```
   ArgusAccountHelper: 0x33Ea27dBccE4C06AC8262229FF755FdD5ef5aEfd
   ArgusViewHelper: 0x7677E361aEC4ee6e13D27806BC914Dd35c0Da0D8
@@ -107,7 +111,7 @@ Arbitrum:
   GmxGlpAuthorizer: 0x5cf9ad70AbC53dda7f99Cd3C651DC238F5Dc700B
 ```
 
-Avalanche:
+**Avalanche:**
 
 ```
   ArgusAccountHelper: 0xC97d4AA85e7F3c7553555608A83Cb973E68d48f3

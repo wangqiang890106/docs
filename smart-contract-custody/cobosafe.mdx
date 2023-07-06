@@ -1,8 +1,27 @@
 ---
 title: "Cobo Safe"
 icon: ""
-description: Access control framework for smart contract wallet
+description: The on-chain access control framework of Cobo Argus
 ---
+##  What is Cobo Safe?
+Cobo Safe, also named as Cobo Safe Module,  is the core component of Cobo Argus  infrastructure, which is a smart contract designed for on-chain access control and parameter-level of risk management developed on top of the Gnosis Safe Module. Cobo Safe facilitates professional crypto funds and traders with fluid interaction for supported dApps and DeFi protocols under multi-signature key management, role-based access control, smart contract based risk management, designated work flow and scope of authority and duties.
 
+We provide a product interface for Cobo Safe on the Cobo Argus website. The client can decide how they use Cobo Safe, by ABI call or manually operate through the Argus website.
 
-TODO
+## What Can I Through in Cobo Safe
+
+### Create Safe Roles
+Owners can create customized safe roles through Cobo Safe, such as "harvesters, traders, etc.” They are then able to set up smart contracts for DeFi projects, and set specific contractual permissions so that transactions can take place within restricted limits.
+Delegate permissions to Members
+After creating the role, you need to assign the role to a specific Member, and the Member can complete the transaction within the transaction parameters specified in the role by means of a single signature, improving the efficiency while ensuring the security of the transaction.
+
+### Import Authorizer contracts
+If you require deep parameter-level control over the transactions that a member can execute, you can import an Authorizer contract for the target contract, whereby all interactions initiated by that member with the target contract will be restricted by the Authorizer contract.
+Cobo also offers a custom Authorizer contract service, if you require it, you can contact argussupport@cobo.com
+
+### Setting a Whitelist for Token Transactions
+You can restrict Members to only send specific Tokens to whitelist addresses.
+Note that currently this feature is only available by ABI call. It’s not supported on the Argus website yet. But we will support it as soon as possible.
+
+### Single-sig DeFi Transactions
+Members can connect to the DeFi program through Wallet Connect and perform DeFi transactions within their permitted role.

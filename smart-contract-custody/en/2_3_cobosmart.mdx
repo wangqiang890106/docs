@@ -1,14 +1,14 @@
 ---
 title: "Cobo Smart Account"
-icon:
-description:
+icon: 
+description: 
 ---
 
-`Cobo Smart Account` is a smart contract wallet, where digital assets are stored in the underlying smart contract of the `Cobo Smart Account`.
+`Cobo Smart Account` is a simple smart contract wallet for storing digital assets and sending transactions.
 
-The `Account Address` will be the address of the underlying smart contract.
+The `Account Address` of a `Cobo Smart Account` will be the address of the underlying smart contract.&#x20;
 
-`Cobo Smart Account` sends transactions using `call` and `delegatecall` as follows
+`Cobo Smart Account` sends transactions using  `call` and  `delegatecall` as follows:
 
 ```solidity
 contract CoboSmartAccount is BaseAccount {

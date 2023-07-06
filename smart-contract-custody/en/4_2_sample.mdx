@@ -4,13 +4,12 @@ icon:
 description: 
 ---
 
+In this example, the following access controls are implemented by `SampleAuthorizer`:
 
-In this example, the following role-based access controls are implemented by the `Authorizer`:
+* (Before a transaction is executed) validate that the transaction amount is below 1,000 wei
+* (After a transaction has been executed) validate that the initiator of the transaction has a wallet balance greater than 10,000 wei &#x20;
 
-* Review the transaction before it is executed to make sure that the transaction amount is below 1,000 ETH.
-* Review the transaction after it is executed to make sure that the transaction initiator has a wallet balance greater than 10,000 ETH
-
-```js
+```solidity
 // SPDX-License-Identifier: LGPL-3.0-only
 pragma solidity ^0.8.19;
 
