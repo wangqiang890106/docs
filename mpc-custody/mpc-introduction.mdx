@@ -1,32 +1,54 @@
 ---
-title: "MPC Co-Managed Custody"
+title: "Introduction"
+icon: ""
+description: "Co-Managed Custody based on MPC-TSS"
 ---
-Cobo MPC Co-Managed Custody is a state-of-the-art custody solution that leverages advanced Multi-Party Computation (MPC) technology to implement a Threshold Signature Scheme (TSS).
 
-With Cobo’s MPC-TSS technology, private key-shares are individually generated within separate secure environments, encrypted, and divided amongst multiple parties. These parties will jointly sign transactions without ever exposing their individual key-share to one another, or materializing the full private key at any point. This ensures that the private key never exists or resides in any one device, effectively removing the single point of failure and insulating user assets from security attacks and human errors.
+Cobo MPC Co-Managed Custody leverages advanced Multi-Party Computation (MPC) technology to implement a Threshold Signature Scheme (TSS).
 
+With MPC-TSS technology, private key-shares are individually generated within
+separate secure environments, encrypted, and divided amongst multiple parties.
+These parties will jointly sign transactions without ever exposing their
+individual key-share to one another, or materializing the full private key at
+any point. This ensures that the private key never exists or resides in any one
+device, effectively removing the single point of failure and insulating user
+assets from security attacks and human errors.
+
+In Cobo's MPC Co-Managed Custody, a typical set up is 2-out-of-3 TSS, where
+Cobo stores and manages one of the three key shares. The client holds one of
+the three key shares. The last key share is either stored by the client in an
+offline environment or entrusted to a dedicated third party key backup/recovery
+service provide, i.e. insurance or security companies. Only Cobo and the client
+are required to cooperate to sign transactions, the backup key share are only
+needed in extreme conditions, e.g. one of Cobo or client's key share is
+damanaged or lost.
 
 # Benefits
 
-* No Single Point of Failure
+- No Single Point of Failure
 
-  * Key sharding achieves decentralization and ensures that no unauthorized party can unilaterally move your funds, preventing asset loss from external hacks or internal fraud and collusion.
-* Lower Transaction Fees
+  - Key sharding achieves decentralization and ensures that no unauthorized party can unilaterally move your funds, preventing asset loss from external hacks or internal fraud and collusion.
 
-  * MPC-TSS runs entirely off-chain, minimizing gas fees while maximizing security.
-* Asset Recovery Assurance
+- Lower Transaction Fees
 
-  * If your key-share is lost or compromised, or in the event of any catastrophic event or system failure, remaining key-shares can collaborate to ensure that you can access and recover your assets.
-* Comprehensive Token Support
+  - MPC-TSS runs entirely off-chain, minimizing gas fees while maximizing security.
 
-  * MPC technology is chain- and asset-agnostic by design, enabling easy onboarding of new tokens.
-  * 1,200+ tokens across 27+ chains supported currently, encompassing the majority of active public blockchains, and we are constantly expanding this list.
-* Unparalleled Access to Web3
+- Asset Recovery Assurance
 
-  * Securely connect to a multitude of DApps including DeFi, NFTs, DAOs, etc, and interact directly with Web3 using Cobo Connect browser extension.
-* Enhanced Operational Flexibility
+  - If your key-share is lost or compromised, or in the event of any catastrophic event or system failure, remaining key-shares can collaborate to ensure that you can access and recover your assets.
 
-  * MPC technology allows for easy ongoing modifications to access controls and approval thresholds, enabling seamless operational adjustments as your organization scales.
+- Comprehensive Token Support
+
+  - MPC technology is chain- and asset-agnostic by design, enabling easy onboarding of new tokens.
+  - 1,200+ tokens across 27+ chains supported currently, encompassing the majority of active public blockchains, and we are constantly expanding this list.
+
+- Easy and Safe Access to Web3
+
+  - Securely connect to a multitude of DApps including DeFi, NFTs, DAOs, etc, and interact directly with Web3 using Cobo Connect browser extension.
+
+- Enhanced Operational Flexibility
+
+  - MPC technology allows for easy ongoing modifications to access controls and approval thresholds, enabling seamless operational adjustments as your organization scales.
 
 # Key Features
 
@@ -65,5 +87,3 @@ Cobo MPC Co-managed Custody offers simple wallet APIs and plug-and-play SDKs, su
 Cobo WaaS allows you to generate and manage addresses on all supported chains, send and receive tokens, manage token sweep, interact with smart contracts, receive transaction notifications, view transaction history, and more. Cobo provides client libraries in five programming languages — Python, JavaScript, Golang, Java, and PHP.
 
 ![](https://lh6.googleusercontent.com/dDP3Cr-TfC6JbINNFeNualN8vkKnUQfiU92ijOrX9lkgkW-yPMenoOD3daG-gv8Vqr-NzsHlqGFtcjEBfKiv-_lpFh4XgTg8lKLpDSwEp5QtzhmHscU3GB3DNm0SSQEQN4qpnOWuy0HdTbJUEcs6F1o)
-
-

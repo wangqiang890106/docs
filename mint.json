@@ -52,15 +52,11 @@
   "navigation": [
     {
       "group": "Overview",
-      "pages": [
-        "introduction"
-      ]
+      "pages": ["introduction"]
     },
     {
       "group": "Overview",
-      "pages": [
-        "full-custody/introduction"
-      ]
+      "pages": ["full-custody/introduction"]
     },
     {
       "group": "Get Started",
@@ -182,9 +178,7 @@
     },
     {
       "group": "Overview",
-      "pages": [
-        "mpc-custody/mpc-introduction"
-      ]
+      "pages": ["mpc-custody/mpc-introduction"]
     },
     {
       "group": "Get Started",
@@ -232,9 +226,7 @@
         },
         {
           "group": "Tss Node",
-          "pages": [
-            "mpc-custody/api/mpc_list_tss_node_requests"
-          ]
+          "pages": ["mpc-custody/api/mpc_list_tss_node_requests"]
         },
         {
           "group": "Bind Auth",
@@ -286,9 +278,7 @@
             },
             {
               "group": "Tss Node",
-              "pages": [
-                "mpc-custody/api/web3/mpc_list_tss_node_requests"
-              ]
+              "pages": ["mpc-custody/api/web3/mpc_list_tss_node_requests"]
             },
             {
               "group": "Bind Auth",
@@ -336,15 +326,13 @@
     },
     {
       "group": "Tools",
-      "pages": [
-        "mpc-custody/tools/recovery-kit"
-      ]
+      "pages": ["mpc-custody/tools/recovery-kit"]
     },
     {
       "group": "Overview",
       "pages": [
-        "smart-contract-custody/coboargus",
-        "smart-contract-custody/cobosafe"
+        "smart-contract-custody/cobosafe",
+        "smart-contract-custody/coboargus"
       ]
     },
     {
@@ -385,19 +373,11 @@
     },
     {
       "group": "Tools",
-      "pages": [
-        "smart-contract-custody/tools/overview"
-      ]
+      "pages": ["smart-contract-custody/tools/overview"]
     },
     {
       "group": "Community",
-      "pages": [
-        "twitter",
-        "linkedln",
-        "discord",
-        "telegram",
-        "contact"
-      ]
+      "pages": ["twitter", "linkedln", "discord", "telegram", "contact"]
     }
   ],
   "footerSocials": {
@@ -413,11 +393,11 @@
     "baseUrl": [
       "https://api.cobo.com",
       "https://api.sandbox.cobo.com",
-      "https://api.develop.cobo.com",
-      "https://custody.develop.cobo.com"
+      "https://api.develop.cobo.com"
     ],
     "auth": {
-      "method": "cobo"
+      "method": "basic",
+      "name": "Biz-Api-Key:BIZ-API-SIGNATURE:BIZ-API-NONCE"
     },
     "playground": {
       "mode": "show"
