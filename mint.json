@@ -416,8 +416,7 @@
       "https://api.develop.cobo.com"
     ],
     "auth": {
-      "method": "basic",
-      "name": "Biz-Api-Key:BIZ-API-SIGNATURE:BIZ-API-NONCE"
+      "method": "cobo"
     },
     "playground": {
       "mode": "show"
