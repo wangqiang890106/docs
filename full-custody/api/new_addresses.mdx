@@ -8,9 +8,9 @@ description: "This endpoint generates new addresses for a given coin and returns
 Cobo supports withdrawal to any BTC address type)</Note>
 
 #### Request
-<ParamField query="coin" type="String" required>The coin to generate addresses for.</ParamField>
-<ParamField query="count" type="Int" required>The number of addresses to generate.</ParamField>
-<ParamField query="native_segwit" type="Bool">Whether to generate native segwit addresses.</ParamField>
+<ParamField body="coin" type="String" required>The coin to generate addresses for.</ParamField>
+<ParamField body="count" type="Int" required>The number of addresses to generate.</ParamField>
+<ParamField body="native_segwit" type="Bool">Whether to generate native segwit addresses.</ParamField>
 
 
 #### Response
