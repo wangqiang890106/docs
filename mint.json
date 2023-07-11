@@ -377,7 +377,7 @@
     },
     {
       "group": "Community",
-      "pages": ["twitter", "linkedln", "discord", "telegram", "contact"]
+      "pages": ["twitter", "linkedln", "discord", "telegram"]
     }
   ],
   "footerSocials": {
@@ -391,8 +391,6 @@
   },
   "api": {
     "baseUrl": [
-      "https://api.cobo.com",
-      "https://api.sandbox.cobo.com",
       "https://api.develop.cobo.com"
     ],
     "auth": {
